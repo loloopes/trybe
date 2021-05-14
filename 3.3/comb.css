@@ -1,0 +1,16 @@
+.ol {
+    background-color: yellow;
+}
+
+.par {
+    color: green;
+}
+
+.prim{
+    text-transform:uppercase;
+}
+
+h1,h2,h3,h4 em { 
+    background-color: red;
+    text-size-adjust: 500px;
+}
