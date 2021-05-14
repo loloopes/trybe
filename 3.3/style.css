@@ -26,7 +26,8 @@
 
 .word {
     position: absolute;
-    left: 555px;
-    top: 253px;
+    left: 525px;
+    top: 242px;
     z-index: 1;
+    font-size: x-large;
 }
