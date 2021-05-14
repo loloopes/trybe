@@ -12,5 +12,25 @@
 
 h1,h2,h3,h4 em { 
     background-color: red;
-    text-size-adjust: 500px;
+}
+
+#stack:hover {
+    background-color: orange;
+}
+
+#schools:hover {
+    background-color: green;
+}
+
+#mdn:hover {
+    background-color: black;
+    color:blue;
+}
+
+#dev:hover {
+    background-color: yellow;
+}
+
+#trybe:hover {
+    background-color: green;
 }
