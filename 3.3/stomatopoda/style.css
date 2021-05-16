@@ -1,0 +1,14 @@
+header{
+    font-size: 65px;
+}
+
+aside{
+    width: 120px;
+}
+
+h1, h2{
+    display: inline-block;
+    font-size: 32px;
+    height: 10px;
+
+}
