@@ -22,7 +22,7 @@ h1{
 }
 
 main {
-    width: 1400px;
+    width: 74%;
     text-align: justify;
     display: inline-block;
     background-color: rgb(161, 206, 250);
@@ -61,5 +61,16 @@ footer{
 
 .img1{
     float: right;
-    margin-left: 20px;
+    margin: 10px;
 }
+
+.img2{
+    float: left;
+    margin: 10px;
+}
+
+.img3{
+    float: left;
+    margin: 10px;
+}
+
