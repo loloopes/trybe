@@ -74,3 +74,16 @@ footer{
     margin: 10px;
 }
 
+
+.teste:hover {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Darwin%27s_finches_by_Gould.jpg/480px-Darwin%27s_finches_by_Gould.jpg") no-repeat;
+}
+
+
+.hide{
+    display: none;
+  }
+
+.myDIV:hover + .hide{
+    display: block;
+}
