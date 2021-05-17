@@ -1,14 +1,39 @@
 header{
     font-size: 65px;
+    text-align: center;
 }
 
-aside{
-    width: 120px;
+#navegacao{
+    width: 170px;
+    display: inline-block;
 }
 
-h1, h2{
+#resumo{
+    float: right;
+    display: inline-block;
+    width: 290px;
+}
+
+h1{
     display: inline-block;
     font-size: 32px;
     height: 10px;
 
+}
+
+main {
+    width: 1420px;
+    text-align: justify;
+    display: inline-block;
+    background-color: rgb(161, 206, 250);
+    vertical-align: top;
+}
+
+ul {
+    background-color: rgb(223, 221, 221);
+}
+
+li{
+    display: block;
+    text-align: left;
 }
