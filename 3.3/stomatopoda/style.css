@@ -22,11 +22,13 @@ h1{
 }
 
 main {
-    width: 1420px;
+    width: 1400px;
     text-align: justify;
     display: inline-block;
     background-color: rgb(161, 206, 250);
     vertical-align: top;
+    padding: 10px;
+    margin: 20px red;
 }
 
 ul {
@@ -36,4 +38,19 @@ ul {
 li{
     display: block;
     text-align: left;
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+.div1{
+    width: 220px;
+    height: 180px;
 }
