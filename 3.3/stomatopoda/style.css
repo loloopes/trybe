@@ -28,7 +28,7 @@ main {
     background-color: rgb(161, 206, 250);
     vertical-align: top;
     padding: 10px;
-    margin: 20px red;
+
 }
 
 ul {
@@ -53,4 +53,13 @@ a:hover {
 .div1{
     width: 220px;
     height: 180px;
+}
+
+footer{
+    text-align: center;
+}
+
+.img1{
+    float: right;
+    margin-left: 20px;
 }
