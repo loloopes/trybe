@@ -87,3 +87,7 @@ footer{
 .myDIV:hover + .hide{
     display: block;
 }
+
+div {
+    display: inline-block;
+}
