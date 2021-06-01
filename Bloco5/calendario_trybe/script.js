@@ -13,7 +13,51 @@ function createDaysOfTheWeek() {
 
   createDaysOfTheWeek();
   createDaysOfTheMonth();
+  holidaysOfTheMonth();
+  fridaysOfTheMonth();
+  holidays('FeriadBLAU');
+  holidayListener();
+  changeFriday('XablausterS');
+  reallyFriday();
+  zoomIn();
+  zoomOut();
+  tasks('cozinhar');
+
+  function fridaysOfTheMonth(){
+
+    
+    let li = document.querySelectorAll ('li');
+
+    for (let i in li){
+      if(li[i].innerHTML == 4 || li[i].innerHTML == 11 || li[i].innerHTML == 18 || li[i].innerHTML == 25) {
+        li[i].innerHTML = 'Xablousious';
+        li[i].classList.add('friday');
+      }
+
+    }
+
+
+  }
+ 
   
+  
+  function holidaysOfTheMonth(){
+
+    
+    let li = document.querySelectorAll ('.day, .Holiday');
+
+    for (let i in li){
+      if(i== 25 || i== 26 || i == 32) {
+        li[i].innerHTML = 'E feriado';
+        li[i].className = 'Holiday';
+      }
+
+    }
+
+
+  }
+
+
   function createDaysOfTheMonth(){
     
     
@@ -26,8 +70,82 @@ function createDaysOfTheWeek() {
       ul.appendChild(days);
       days.className = 'day';
     }
+}
+
+function holidayListener(){ 
+  const button = document.getElementById('btn-holiday')
+  button.addEventListener('click',() => {
+  const li = document.querySelectorAll ('.Holiday');
+  for (let i in li) { if (li[i].style.backgroundColor != 'red') {
+    li[i].style.backgroundColor = 'red';
+  } else {
+    li[i].style.backgroundColor = '#eee';
+  }
+  }                                
+  })
+}; 
+  
+
+ 
+
+function holidays(holidaysString) {
+  //Selecionar o elemento
+  //Criar o elemento
+  //pai.appendChild(filho)
+  const buttonCont = document.querySelector('.buttons-container');
+  const button = document.createElement('button');
+  buttonCont.appendChild(button);
+  button.id='btn-holiday';
+  button.innerText=holidaysString;
+}
+
+
+function changeFriday(String) {
+  const buttonCont = document.querySelector('.buttons-container');
+  const button = document.createElement('button');
+  buttonCont.appendChild(button);
+  button.id = 'btn-friday';
+  button.innerText=String;
+}
+
+function reallyFriday(){ 
+  const button = document.getElementById('btn-friday')
+
+  button.addEventListener('click',() => {
+  const li = document.querySelectorAll ('.day, .Holiday');
+  for (let i = 5; i < li.length; i +=7) { if (li[i].style.backgroundColor != 'red') {
+    li[i].style.backgroundColor = 'red';
+  } else {
+    li[i].style.backgroundColor = '#eee';
+  }
+  }                                
+  })
+} 
+
+
+function zoomIn(){
+  let daysList = document.querySelector('#days')
+  daysList.addEventListener('mouseover', (event) => {
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+  })
+}
+
+function zoomOut(){
+  let daysList = document.querySelector('#days')
+  daysList.addEventListener('mouseout', (event) => {
+    event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = '200';
+  })
+}
+
+function tasks(String){
+    const buttonCont = document.querySelector('.my-tasks');
+    const span = document.createElement('span');
+    buttonCont.appendChild(span);
+    span.innerText=String;
+  
+  }
 
 
 
-
- }
