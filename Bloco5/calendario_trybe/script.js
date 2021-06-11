@@ -22,6 +22,9 @@ function createDaysOfTheWeek() {
   zoomIn();
   zoomOut();
   tasks('cozinhar');
+  color('red');
+  taskSelect();
+
 
   function fridaysOfTheMonth(){
 
@@ -148,4 +151,22 @@ function tasks(String){
   }
 
 
+  function color(String){
+    const buttonCont = document.querySelector('.my-tasks');
+    const div = document.createElement('div');
+    buttonCont.appendChild(div);
+    div.style.backgroundColor = String;
+    div.className = 'task';
+  
+  }
 
+
+
+
+  function taskSelect(){
+    let ul = document.querySelector('.my-tasks')
+    // console.log(ul)
+    ul.addEventListener('click', (event) => {
+      event.target.classList.add('selected')
+    })
+  }
