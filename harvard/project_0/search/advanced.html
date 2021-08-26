@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Search</title>
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav div {
+            display: flex;
+            width: 300px;
+            justify-content: space-evenly;
+        }
+
+        .search_box {
+            border-radius: 20px;
+            margin-bottom: 40px;
+            width: 450px;
+            height: 35px;
+        }
+
+        .btn {
+            border-radius: 5px;
+            width: 150px;
+            height: 35px;
+        } 
+        
+        .form {
+            text-align: center;
+            margin-top: 13em;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav">
+        <div>
+          <a href="./index.html">Search All</a>
+        </div>
+      </div>
+    </nav>
+    </header>
+    <main>
+      <form class="form" action="https://google.com/search">
+        <div>
+          <label for="all">all these words: </label>
+          <input class="search_box" type="text" id="all" name="as_q"><br>
+
+          <label for="this">this exact word or phrase:</label>
+          <input class="search_box" type="text" id="this" name="as_epq"><br>
+
+          <label for="any">any of these words: </label>
+          <input class="search_box" type="text" id="any" name="as_oq"><br>
+
+          <label for="none">none of these words:</label>
+          <input class="search_box" type="text" id="none" name="as_eq">
+        </div>
+        <div>
+          <input class="btn" type="submit" value="Advanced Search">
+        </div>
+        <div>
+          <label for="field5">numbers ranging from: </label>
+          <input type="text" class="textinput1" id="field5" value=""  name="as_nlo">
+          <span class="seperator">to</span>
+          <input type="text" class="textinput2" id="field5" value=""  name="as_nhi">
+      </div>
+      </form>
+    </main>
+</body>
+</html>
