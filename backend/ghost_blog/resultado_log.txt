@@ -1,0 +1,1655 @@
+Attaching to ghost_blog_ghost_1, ghost_blog_db_1
+[36mdb_1     |[0m 2021-11-05 23:23:52+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05 23:23:52+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[36mdb_1     |[0m 2021-11-05 23:23:52+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05T23:23:53.239670Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+[36mdb_1     |[0m 2021-11-05T23:23:53.242463Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+[36mdb_1     |[0m 2021-11-05T23:23:53.248520Z 0 [Note] InnoDB: PUNCH HOLE support available
+[36mdb_1     |[0m 2021-11-05T23:23:53.248552Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+[36mdb_1     |[0m 2021-11-05T23:23:53.248562Z 0 [Note] InnoDB: Uses event mutexes
+[36mdb_1     |[0m 2021-11-05T23:23:53.248569Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+[36mdb_1     |[0m 2021-11-05T23:23:53.248576Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[36mdb_1     |[0m 2021-11-05T23:23:53.248583Z 0 [Note] InnoDB: Using Linux native AIO
+[36mdb_1     |[0m 2021-11-05T23:23:53.249072Z 0 [Note] InnoDB: Number of pools: 1
+[36mdb_1     |[0m 2021-11-05T23:23:53.249269Z 0 [Note] InnoDB: Using CPU crc32 instructions
+[36mdb_1     |[0m 2021-11-05T23:23:53.251967Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+[36mdb_1     |[0m 2021-11-05T23:23:53.273170Z 0 [Note] InnoDB: Completed initialization of buffer pool
+[36mdb_1     |[0m 2021-11-05T23:23:53.277108Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+[36mdb_1     |[0m 2021-11-05T23:23:53.289532Z 0 [ERROR] [FATAL] InnoDB: Table flags are 0 in the data dictionary but the flags in file ./ibdata1 are 0x4000!
+[36mdb_1     |[0m 2021-11-05 23:23:53 0x7fb6bb8d5740  InnoDB: Assertion failure in thread 140422807377728 in file ut0ut.cc line 921
+[36mdb_1     |[0m InnoDB: We intentionally generate a memory trap.
+[36mdb_1     |[0m InnoDB: Submit a detailed bug report to http://bugs.mysql.com.
+[36mdb_1     |[0m InnoDB: If you get repeated assertion failures or crashes, even
+[36mdb_1     |[0m InnoDB: immediately after the mysqld startup, there may be
+[36mdb_1     |[0m InnoDB: corruption in the InnoDB tablespace. Please refer to
+[36mdb_1     |[0m InnoDB: http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html
+[36mdb_1     |[0m InnoDB: about forcing recovery.
+[36mdb_1     |[0m 23:23:53 UTC - mysqld got signal 6 ;
+[36mdb_1     |[0m This could be because you hit a bug. It is also possible that this binary
+[36mdb_1     |[0m or one of the libraries it was linked against is corrupt, improperly built,
+[36mdb_1     |[0m or misconfigured. This error can also be caused by malfunctioning hardware.
+[36mdb_1     |[0m Attempting to collect some information that could help diagnose the problem.
+[36mdb_1     |[0m As this is a crash and something is definitely wrong, the information
+[36mdb_1     |[0m collection process might fail.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m key_buffer_size=8388608
+[36mdb_1     |[0m read_buffer_size=131072
+[36mdb_1     |[0m max_used_connections=0
+[36mdb_1     |[0m max_threads=151
+[36mdb_1     |[0m thread_count=0
+[33mghost_1  |[0m (node:55) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+[33mghost_1  |[0m [2021-11-05 23:23:54] [31mERROR[39m
+[33mghost_1  |[0m [31m
+[33mghost_1  |[0m [31mNAME: RollbackError[39m
+[33mghost_1  |[0m [31mCODE: ECONNREFUSED[39m
+[33mghost_1  |[0m [31mMESSAGE: connect ECONNREFUSED 172.29.0.2:3306[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mlevel:[39m[37mnormal[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mOuterError: The server has encountered an error.[39m
+[33mghost_1  |[0m [37mRollbackError: connect ECONNREFUSED 172.29.0.2:3306
+[33mghost_1  |[0m     at RollbackError.KnexMigrateError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:7:26)
+[33mghost_1  |[0m     at new RollbackError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:32:26)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/index.js:212:23
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Promise._settlePromiseFromHandler (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:547:31)
+[33mghost_1  |[0m     at Promise._settlePromise (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:604:18)
+[33mghost_1  |[0m     at Promise._settlePromise0 (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:649:10)
+[33mghost_1  |[0m     at Promise._settlePromises (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:725:18)
+[33mghost_1  |[0m     at _drainQueueStep (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:93:12)
+[33mghost_1  |[0m     at _drainQueue (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:86:9)
+[33mghost_1  |[0m     at Async._drainQueues (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:102:5)
+[33mghost_1  |[0m     at Immediate.Async.drainQueues [as _onImmediate] (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:15:14)
+[33mghost_1  |[0m     at runCallback (timers.js:705:18)
+[33mghost_1  |[0m     at tryOnImmediate (timers.js:676:5)
+[33mghost_1  |[0m     at processImmediate (timers.js:658:5)
+[33mghost_1  |[0m 
+[33mghost_1  |[0m Error: connect ECONNREFUSED 172.29.0.2:3306
+[33mghost_1  |[0m     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+[33mghost_1  |[0m     --------------------
+[33mghost_1  |[0m     at Protocol._enqueue (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+[33mghost_1  |[0m     at Protocol.handshake (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+[33mghost_1  |[0m     at Connection.connect (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/Connection.js:130:18)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:109:18
+[36mdb_1     |[0m connection_count=0
+[36mdb_1     |[0m It is possible that mysqld could use up to 
+[36mdb_1     |[0m key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 68197 K  bytes of memory
+[36mdb_1     |[0m Hope that's ok; if not, decrease some variables in the equation.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m Thread pointer: 0x0
+[36mdb_1     |[0m Attempting backtrace. You can use the following information to find out
+[36mdb_1     |[0m where mysqld died. If you see no messages after this, something went
+[36mdb_1     |[0m terribly wrong...
+[36mdb_1     |[0m stack_bottom = 0 thread_stack 0x40000
+[36mdb_1     |[0m mysqld(my_print_stacktrace+0x2c)[0x5559209ef98c]
+[36mdb_1     |[0m mysqld(handle_fatal_signal+0x501)[0x5559202eff71]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libpthread.so.0(+0x12730)[0x7fb6bbe36730]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x10b)[0x7fb6bb9117bb]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(abort+0x121)[0x7fb6bb8fc535]
+[36mdb_1     |[0m mysqld(+0x6c3e0f)[0x5559202b6e0f]
+[36mdb_1     |[0m mysqld(+0x6c41ed)[0x5559202b71ed]
+[36mdb_1     |[0m mysqld(+0x11cc6d6)[0x555920dbf6d6]
+[36mdb_1     |[0m mysqld(+0x11ccd8e)[0x555920dbfd8e]
+[36mdb_1     |[0m mysqld(_Z6fil_ioRK9IORequestbRK9page_id_tRK11page_size_tmmPvS8_+0x312)[0x555920dc7892]
+[36mdb_1     |[0m mysqld(+0x118cfd8)[0x555920d7ffd8]
+[36mdb_1     |[0m mysqld(_Z13buf_read_pageRK9page_id_tRK11page_size_t+0x31)[0x555920d80601]
+[36mdb_1     |[0m mysqld(_Z16buf_page_get_genRK9page_id_tRK11page_size_tmP11buf_block_tmPKcmP5mtr_tb+0x409)[0x555920d54589]
+[36mdb_1     |[0m mysqld(_Z31trx_rseg_get_n_undo_tablespacesPm+0x13e)[0x555920cf0e6e]
+[36mdb_1     |[0m mysqld(+0x10cebd7)[0x555920cc1bd7]
+[36mdb_1     |[0m mysqld(_Z34innobase_start_or_create_for_mysqlv+0x2f7f)[0x555920cc57af]
+[36mdb_1     |[0m mysqld(+0xfa4d20)[0x555920b97d20]
+[36mdb_1     |[0m mysqld(_Z24ha_initialize_handlertonP13st_plugin_int+0x55)[0x555920341c35]
+[36mdb_1     |[0m mysqld(+0xbf7126)[0x5559207ea126]
+[36mdb_1     |[0m mysqld(_Z40plugin_register_builtin_and_init_core_sePiPPc+0x1dc)[0x5559207ebffc]
+[36mdb_1     |[0m mysqld(+0x6f773e)[0x5559202ea73e]
+[36mdb_1     |[0m mysqld(_Z11mysqld_mainiPPc+0x758)[0x5559202ebba8]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xeb)[0x7fb6bb8fe09b]
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/debuggability.js:384:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:518:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:103:10)
+[33mghost_1  |[0m     at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:104:12)
+[33mghost_1  |[0m     at create (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:283:23)
+[33mghost_1  |[0m     at utils_1.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:34)
+[33mghost_1  |[0m     at Object.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/utils.js:53:24)
+[33mghost_1  |[0m     at Promise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:17)
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/debuggability.js:303:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:483:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:79:10)
+[33mghost_1  |[0m     at callbackOrPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:306:12)
+[33mghost_1  |[0m     at Pool._create (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:236:9)
+[33mghost_1  |[0m     at Pool._doCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:208:36)
+[33mghost_1  |[0m     at Pool._tryAcquireOrCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:159:18)
+[33mghost_1  |[0m     at Pool.acquire (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:85:14)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:336:26
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Function.Promise.attempt.Promise.try (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/method.js:39:29)
+[33mghost_1  |[0m     at Client_MySQL.acquireConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:335:34)
+[33mghost_1  |[0m     at Runner.ensureConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:233:24)
+[36mdb_1     |[0m mysqld(_start+0x2a)[0x5559202e0bea]
+[36mdb_1     |[0m The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+[36mdb_1     |[0m information that should help you find out what is causing the crash.
+[36mdb_1     |[0m 2021-11-05 23:23:54+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05 23:23:54+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[36mdb_1     |[0m 2021-11-05 23:23:54+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05T23:23:54.983831Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+[36mdb_1     |[0m 2021-11-05T23:23:54.987462Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+[36mdb_1     |[0m 2021-11-05T23:23:54.993994Z 0 [Note] InnoDB: PUNCH HOLE support available
+[36mdb_1     |[0m 2021-11-05T23:23:54.994022Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+[36mdb_1     |[0m 2021-11-05T23:23:54.994029Z 0 [Note] InnoDB: Uses event mutexes
+[36mdb_1     |[0m 2021-11-05T23:23:54.994034Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+[36mdb_1     |[0m 2021-11-05T23:23:54.994040Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[36mdb_1     |[0m 2021-11-05T23:23:54.994045Z 0 [Note] InnoDB: Using Linux native AIO
+[36mdb_1     |[0m 2021-11-05T23:23:54.994578Z 0 [Note] InnoDB: Number of pools: 1
+[36mdb_1     |[0m 2021-11-05T23:23:54.994838Z 0 [Note] InnoDB: Using CPU crc32 instructions
+[36mdb_1     |[0m 2021-11-05T23:23:54.997681Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+[36mdb_1     |[0m 2021-11-05T23:23:55.018549Z 0 [Note] InnoDB: Completed initialization of buffer pool
+[33mghost_1  |[0m     at Runner.run (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:47:42)
+[33mghost_1  |[0m     at Builder.Target.then (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/interface.js:39:43)
+[33mghost_1  |[0m     at Builder.tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)[39m
+[33mghost_1  |[0m [39m
+[33mghost_1  |[0m [90m[39m
+[33mghost_1  |[0m (node:24) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+[33mghost_1  |[0m [2021-11-05 23:24:01] [31mERROR[39m
+[33mghost_1  |[0m [31m
+[33mghost_1  |[0m [31mNAME: RollbackError[39m
+[33mghost_1  |[0m [31mCODE: ECONNREFUSED[39m
+[33mghost_1  |[0m [31mMESSAGE: connect ECONNREFUSED 172.29.0.3:3306[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mlevel:[39m[37mnormal[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mOuterError: The server has encountered an error.[39m
+[33mghost_1  |[0m [37mRollbackError: connect ECONNREFUSED 172.29.0.3:3306
+[33mghost_1  |[0m     at RollbackError.KnexMigrateError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:7:26)
+[33mghost_1  |[0m     at new RollbackError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:32:26)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/index.js:212:23
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Promise._settlePromiseFromHandler (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:547:31)
+[33mghost_1  |[0m     at Promise._settlePromise (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:604:18)
+[33mghost_1  |[0m     at Promise._settlePromise0 (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:649:10)
+[36mdb_1     |[0m 2021-11-05T23:23:55.022295Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+[36mdb_1     |[0m 2021-11-05T23:23:55.034402Z 0 [ERROR] [FATAL] InnoDB: Table flags are 0 in the data dictionary but the flags in file ./ibdata1 are 0x4000!
+[36mdb_1     |[0m 2021-11-05 23:23:55 0x7f2a117bf740  InnoDB: Assertion failure in thread 139818658690880 in file ut0ut.cc line 921
+[36mdb_1     |[0m InnoDB: We intentionally generate a memory trap.
+[36mdb_1     |[0m InnoDB: Submit a detailed bug report to http://bugs.mysql.com.
+[36mdb_1     |[0m InnoDB: If you get repeated assertion failures or crashes, even
+[36mdb_1     |[0m InnoDB: immediately after the mysqld startup, there may be
+[36mdb_1     |[0m InnoDB: corruption in the InnoDB tablespace. Please refer to
+[36mdb_1     |[0m InnoDB: http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html
+[36mdb_1     |[0m InnoDB: about forcing recovery.
+[36mdb_1     |[0m 23:23:55 UTC - mysqld got signal 6 ;
+[36mdb_1     |[0m This could be because you hit a bug. It is also possible that this binary
+[36mdb_1     |[0m or one of the libraries it was linked against is corrupt, improperly built,
+[36mdb_1     |[0m or misconfigured. This error can also be caused by malfunctioning hardware.
+[36mdb_1     |[0m Attempting to collect some information that could help diagnose the problem.
+[36mdb_1     |[0m As this is a crash and something is definitely wrong, the information
+[36mdb_1     |[0m collection process might fail.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m key_buffer_size=8388608
+[36mdb_1     |[0m read_buffer_size=131072
+[36mdb_1     |[0m max_used_connections=0
+[36mdb_1     |[0m max_threads=151
+[36mdb_1     |[0m thread_count=0
+[36mdb_1     |[0m connection_count=0
+[36mdb_1     |[0m It is possible that mysqld could use up to 
+[36mdb_1     |[0m key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 68197 K  bytes of memory
+[36mdb_1     |[0m Hope that's ok; if not, decrease some variables in the equation.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m Thread pointer: 0x0
+[36mdb_1     |[0m Attempting backtrace. You can use the following information to find out
+[36mdb_1     |[0m where mysqld died. If you see no messages after this, something went
+[36mdb_1     |[0m terribly wrong...
+[36mdb_1     |[0m stack_bottom = 0 thread_stack 0x40000
+[36mdb_1     |[0m mysqld(my_print_stacktrace+0x2c)[0x555e317fb98c]
+[36mdb_1     |[0m mysqld(handle_fatal_signal+0x501)[0x555e310fbf71]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libpthread.so.0(+0x12730)[0x7f2a11d20730]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x10b)[0x7f2a117fb7bb]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(abort+0x121)[0x7f2a117e6535]
+[36mdb_1     |[0m mysqld(+0x6c3e0f)[0x555e310c2e0f]
+[36mdb_1     |[0m mysqld(+0x6c41ed)[0x555e310c31ed]
+[36mdb_1     |[0m mysqld(+0x11cc6d6)[0x555e31bcb6d6]
+[36mdb_1     |[0m mysqld(+0x11ccd8e)[0x555e31bcbd8e]
+[36mdb_1     |[0m mysqld(_Z6fil_ioRK9IORequestbRK9page_id_tRK11page_size_tmmPvS8_+0x312)[0x555e31bd3892]
+[36mdb_1     |[0m mysqld(+0x118cfd8)[0x555e31b8bfd8]
+[36mdb_1     |[0m mysqld(_Z13buf_read_pageRK9page_id_tRK11page_size_t+0x31)[0x555e31b8c601]
+[36mdb_1     |[0m mysqld(_Z16buf_page_get_genRK9page_id_tRK11page_size_tmP11buf_block_tmPKcmP5mtr_tb+0x409)[0x555e31b60589]
+[36mdb_1     |[0m mysqld(_Z31trx_rseg_get_n_undo_tablespacesPm+0x13e)[0x555e31afce6e]
+[36mdb_1     |[0m mysqld(+0x10cebd7)[0x555e31acdbd7]
+[36mdb_1     |[0m mysqld(_Z34innobase_start_or_create_for_mysqlv+0x2f7f)[0x555e31ad17af]
+[36mdb_1     |[0m mysqld(+0xfa4d20)[0x555e319a3d20]
+[36mdb_1     |[0m mysqld(_Z24ha_initialize_handlertonP13st_plugin_int+0x55)[0x555e3114dc35]
+[36mdb_1     |[0m mysqld(+0xbf7126)[0x555e315f6126]
+[36mdb_1     |[0m mysqld(_Z40plugin_register_builtin_and_init_core_sePiPPc+0x1dc)[0x555e315f7ffc]
+[36mdb_1     |[0m mysqld(+0x6f773e)[0x555e310f673e]
+[36mdb_1     |[0m mysqld(_Z11mysqld_mainiPPc+0x758)[0x555e310f7ba8]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xeb)[0x7f2a117e809b]
+[36mdb_1     |[0m mysqld(_start+0x2a)[0x555e310ecbea]
+[36mdb_1     |[0m The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+[36mdb_1     |[0m information that should help you find out what is causing the crash.
+[36mdb_1     |[0m 2021-11-05 23:23:56+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05 23:23:56+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[36mdb_1     |[0m 2021-11-05 23:23:56+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[33mghost_1  |[0m     at Promise._settlePromises (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:725:18)
+[33mghost_1  |[0m     at _drainQueueStep (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:93:12)
+[36mdb_1     |[0m 2021-11-05T23:23:56.916165Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+[36mdb_1     |[0m 2021-11-05T23:23:56.918785Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+[36mdb_1     |[0m 2021-11-05T23:23:56.925939Z 0 [Note] InnoDB: PUNCH HOLE support available
+[36mdb_1     |[0m 2021-11-05T23:23:56.925981Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+[36mdb_1     |[0m 2021-11-05T23:23:56.926013Z 0 [Note] InnoDB: Uses event mutexes
+[36mdb_1     |[0m 2021-11-05T23:23:56.926022Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+[36mdb_1     |[0m 2021-11-05T23:23:56.926029Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[36mdb_1     |[0m 2021-11-05T23:23:56.926036Z 0 [Note] InnoDB: Using Linux native AIO
+[36mdb_1     |[0m 2021-11-05T23:23:56.926605Z 0 [Note] InnoDB: Number of pools: 1
+[36mdb_1     |[0m 2021-11-05T23:23:56.926880Z 0 [Note] InnoDB: Using CPU crc32 instructions
+[36mdb_1     |[0m 2021-11-05T23:23:56.930196Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+[36mdb_1     |[0m 2021-11-05T23:23:56.958614Z 0 [Note] InnoDB: Completed initialization of buffer pool
+[36mdb_1     |[0m 2021-11-05T23:23:56.963167Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+[36mdb_1     |[0m 2021-11-05T23:23:56.975427Z 0 [ERROR] [FATAL] InnoDB: Table flags are 0 in the data dictionary but the flags in file ./ibdata1 are 0x4000!
+[33mghost_1  |[0m     at _drainQueue (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:86:9)
+[33mghost_1  |[0m     at Async._drainQueues (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:102:5)
+[33mghost_1  |[0m     at Immediate.Async.drainQueues [as _onImmediate] (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:15:14)
+[33mghost_1  |[0m     at runCallback (timers.js:705:18)
+[33mghost_1  |[0m     at tryOnImmediate (timers.js:676:5)
+[33mghost_1  |[0m     at processImmediate (timers.js:658:5)
+[33mghost_1  |[0m 
+[33mghost_1  |[0m Error: connect ECONNREFUSED 172.29.0.3:3306
+[33mghost_1  |[0m     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+[33mghost_1  |[0m     --------------------
+[33mghost_1  |[0m     at Protocol._enqueue (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+[33mghost_1  |[0m     at Protocol.handshake (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+[33mghost_1  |[0m     at Connection.connect (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/Connection.js:130:18)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:109:18
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/debuggability.js:384:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:518:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:103:10)
+[33mghost_1  |[0m     at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:104:12)
+[33mghost_1  |[0m     at create (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:283:23)
+[33mghost_1  |[0m     at utils_1.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:34)
+[33mghost_1  |[0m     at Object.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/utils.js:53:24)
+[33mghost_1  |[0m     at Promise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:17)
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/debuggability.js:303:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:483:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:79:10)
+[33mghost_1  |[0m     at callbackOrPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:306:12)
+[33mghost_1  |[0m     at Pool._create (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:236:9)
+[33mghost_1  |[0m     at Pool._doCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:208:36)
+[33mghost_1  |[0m     at Pool._tryAcquireOrCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:159:18)
+[33mghost_1  |[0m     at Pool.acquire (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:85:14)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:336:26
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Function.Promise.attempt.Promise.try (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/method.js:39:29)
+[33mghost_1  |[0m     at Client_MySQL.acquireConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:335:34)
+[36mdb_1     |[0m 2021-11-05 23:23:56 0x7fbd06e20740  InnoDB: Assertion failure in thread 140449841022784 in file ut0ut.cc line 921
+[36mdb_1     |[0m InnoDB: We intentionally generate a memory trap.
+[36mdb_1     |[0m InnoDB: Submit a detailed bug report to http://bugs.mysql.com.
+[36mdb_1     |[0m InnoDB: If you get repeated assertion failures or crashes, even
+[36mdb_1     |[0m InnoDB: immediately after the mysqld startup, there may be
+[36mdb_1     |[0m InnoDB: corruption in the InnoDB tablespace. Please refer to
+[36mdb_1     |[0m InnoDB: http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html
+[36mdb_1     |[0m InnoDB: about forcing recovery.
+[36mdb_1     |[0m 23:23:56 UTC - mysqld got signal 6 ;
+[36mdb_1     |[0m This could be because you hit a bug. It is also possible that this binary
+[36mdb_1     |[0m or one of the libraries it was linked against is corrupt, improperly built,
+[36mdb_1     |[0m or misconfigured. This error can also be caused by malfunctioning hardware.
+[36mdb_1     |[0m Attempting to collect some information that could help diagnose the problem.
+[36mdb_1     |[0m As this is a crash and something is definitely wrong, the information
+[36mdb_1     |[0m collection process might fail.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m key_buffer_size=8388608
+[36mdb_1     |[0m read_buffer_size=131072
+[36mdb_1     |[0m max_used_connections=0
+[36mdb_1     |[0m max_threads=151
+[36mdb_1     |[0m thread_count=0
+[36mdb_1     |[0m connection_count=0
+[36mdb_1     |[0m It is possible that mysqld could use up to 
+[36mdb_1     |[0m key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 68197 K  bytes of memory
+[36mdb_1     |[0m Hope that's ok; if not, decrease some variables in the equation.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m Thread pointer: 0x0
+[36mdb_1     |[0m Attempting backtrace. You can use the following information to find out
+[36mdb_1     |[0m where mysqld died. If you see no messages after this, something went
+[36mdb_1     |[0m terribly wrong...
+[36mdb_1     |[0m stack_bottom = 0 thread_stack 0x40000
+[36mdb_1     |[0m mysqld(my_print_stacktrace+0x2c)[0x55be6d6d598c]
+[36mdb_1     |[0m mysqld(handle_fatal_signal+0x501)[0x55be6cfd5f71]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libpthread.so.0(+0x12730)[0x7fbd07381730]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x10b)[0x7fbd06e5c7bb]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(abort+0x121)[0x7fbd06e47535]
+[36mdb_1     |[0m mysqld(+0x6c3e0f)[0x55be6cf9ce0f]
+[36mdb_1     |[0m mysqld(+0x6c41ed)[0x55be6cf9d1ed]
+[36mdb_1     |[0m mysqld(+0x11cc6d6)[0x55be6daa56d6]
+[36mdb_1     |[0m mysqld(+0x11ccd8e)[0x55be6daa5d8e]
+[33mghost_1  |[0m     at Runner.ensureConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:233:24)
+[33mghost_1  |[0m     at Runner.run (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:47:42)
+[33mghost_1  |[0m     at Builder.Target.then (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/interface.js:39:43)
+[33mghost_1  |[0m     at Builder.tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)[39m
+[33mghost_1  |[0m [39m
+[33mghost_1  |[0m [90m[39m
+[33mghost_1  |[0m (node:24) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+[33mghost_1  |[0m [2021-11-05 23:24:03] [31mERROR[39m
+[33mghost_1  |[0m [31m
+[33mghost_1  |[0m [31mNAME: RollbackError[39m
+[33mghost_1  |[0m [31mCODE: ECONNREFUSED[39m
+[33mghost_1  |[0m [31mMESSAGE: connect ECONNREFUSED 172.29.0.3:3306[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mlevel:[39m[37mnormal[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mOuterError: The server has encountered an error.[39m
+[33mghost_1  |[0m [37mRollbackError: connect ECONNREFUSED 172.29.0.3:3306
+[33mghost_1  |[0m     at RollbackError.KnexMigrateError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:7:26)
+[33mghost_1  |[0m     at new RollbackError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:32:26)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/index.js:212:23
+[36mdb_1     |[0m mysqld(_Z6fil_ioRK9IORequestbRK9page_id_tRK11page_size_tmmPvS8_+0x312)[0x55be6daad892]
+[36mdb_1     |[0m mysqld(+0x118cfd8)[0x55be6da65fd8]
+[36mdb_1     |[0m mysqld(_Z13buf_read_pageRK9page_id_tRK11page_size_t+0x31)[0x55be6da66601]
+[36mdb_1     |[0m mysqld(_Z16buf_page_get_genRK9page_id_tRK11page_size_tmP11buf_block_tmPKcmP5mtr_tb+0x409)[0x55be6da3a589]
+[36mdb_1     |[0m mysqld(_Z31trx_rseg_get_n_undo_tablespacesPm+0x13e)[0x55be6d9d6e6e]
+[36mdb_1     |[0m mysqld(+0x10cebd7)[0x55be6d9a7bd7]
+[36mdb_1     |[0m mysqld(_Z34innobase_start_or_create_for_mysqlv+0x2f7f)[0x55be6d9ab7af]
+[36mdb_1     |[0m mysqld(+0xfa4d20)[0x55be6d87dd20]
+[36mdb_1     |[0m mysqld(_Z24ha_initialize_handlertonP13st_plugin_int+0x55)[0x55be6d027c35]
+[36mdb_1     |[0m mysqld(+0xbf7126)[0x55be6d4d0126]
+[36mdb_1     |[0m mysqld(_Z40plugin_register_builtin_and_init_core_sePiPPc+0x1dc)[0x55be6d4d1ffc]
+[36mdb_1     |[0m mysqld(+0x6f773e)[0x55be6cfd073e]
+[36mdb_1     |[0m mysqld(_Z11mysqld_mainiPPc+0x758)[0x55be6cfd1ba8]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xeb)[0x7fbd06e4909b]
+[36mdb_1     |[0m mysqld(_start+0x2a)[0x55be6cfc6bea]
+[36mdb_1     |[0m The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+[36mdb_1     |[0m information that should help you find out what is causing the crash.
+[36mdb_1     |[0m 2021-11-05 23:23:58+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05 23:23:58+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[36mdb_1     |[0m 2021-11-05 23:23:58+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05T23:23:58.763935Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+[36mdb_1     |[0m 2021-11-05T23:23:58.766727Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+[36mdb_1     |[0m 2021-11-05T23:23:58.772394Z 0 [Note] InnoDB: PUNCH HOLE support available
+[36mdb_1     |[0m 2021-11-05T23:23:58.772430Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Promise._settlePromiseFromHandler (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:547:31)
+[33mghost_1  |[0m     at Promise._settlePromise (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:604:18)
+[33mghost_1  |[0m     at Promise._settlePromise0 (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:649:10)
+[33mghost_1  |[0m     at Promise._settlePromises (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:725:18)
+[33mghost_1  |[0m     at _drainQueueStep (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:93:12)
+[33mghost_1  |[0m     at _drainQueue (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:86:9)
+[33mghost_1  |[0m     at Async._drainQueues (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:102:5)
+[33mghost_1  |[0m     at Immediate.Async.drainQueues [as _onImmediate] (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:15:14)
+[33mghost_1  |[0m     at runCallback (timers.js:705:18)
+[33mghost_1  |[0m     at tryOnImmediate (timers.js:676:5)
+[33mghost_1  |[0m     at processImmediate (timers.js:658:5)
+[33mghost_1  |[0m 
+[33mghost_1  |[0m Error: connect ECONNREFUSED 172.29.0.3:3306
+[33mghost_1  |[0m     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+[33mghost_1  |[0m     --------------------
+[33mghost_1  |[0m     at Protocol._enqueue (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+[33mghost_1  |[0m     at Protocol.handshake (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+[33mghost_1  |[0m     at Connection.connect (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/Connection.js:130:18)
+[36mdb_1     |[0m 2021-11-05T23:23:58.772439Z 0 [Note] InnoDB: Uses event mutexes
+[36mdb_1     |[0m 2021-11-05T23:23:58.772446Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+[36mdb_1     |[0m 2021-11-05T23:23:58.772453Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[36mdb_1     |[0m 2021-11-05T23:23:58.772460Z 0 [Note] InnoDB: Using Linux native AIO
+[36mdb_1     |[0m 2021-11-05T23:23:58.772913Z 0 [Note] InnoDB: Number of pools: 1
+[36mdb_1     |[0m 2021-11-05T23:23:58.773156Z 0 [Note] InnoDB: Using CPU crc32 instructions
+[36mdb_1     |[0m 2021-11-05T23:23:58.776050Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+[36mdb_1     |[0m 2021-11-05T23:23:58.797608Z 0 [Note] InnoDB: Completed initialization of buffer pool
+[36mdb_1     |[0m 2021-11-05T23:23:58.801422Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+[36mdb_1     |[0m 2021-11-05T23:23:58.813509Z 0 [ERROR] [FATAL] InnoDB: Table flags are 0 in the data dictionary but the flags in file ./ibdata1 are 0x4000!
+[36mdb_1     |[0m 2021-11-05 23:23:58 0x7f50455c6740  InnoDB: Assertion failure in thread 139982737794880 in file ut0ut.cc line 921
+[36mdb_1     |[0m InnoDB: We intentionally generate a memory trap.
+[36mdb_1     |[0m InnoDB: Submit a detailed bug report to http://bugs.mysql.com.
+[36mdb_1     |[0m InnoDB: If you get repeated assertion failures or crashes, even
+[36mdb_1     |[0m InnoDB: immediately after the mysqld startup, there may be
+[36mdb_1     |[0m InnoDB: corruption in the InnoDB tablespace. Please refer to
+[36mdb_1     |[0m InnoDB: http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html
+[36mdb_1     |[0m InnoDB: about forcing recovery.
+[36mdb_1     |[0m 23:23:58 UTC - mysqld got signal 6 ;
+[36mdb_1     |[0m This could be because you hit a bug. It is also possible that this binary
+[36mdb_1     |[0m or one of the libraries it was linked against is corrupt, improperly built,
+[36mdb_1     |[0m or misconfigured. This error can also be caused by malfunctioning hardware.
+[36mdb_1     |[0m Attempting to collect some information that could help diagnose the problem.
+[36mdb_1     |[0m As this is a crash and something is definitely wrong, the information
+[36mdb_1     |[0m collection process might fail.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m key_buffer_size=8388608
+[36mdb_1     |[0m read_buffer_size=131072
+[36mdb_1     |[0m max_used_connections=0
+[36mdb_1     |[0m max_threads=151
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:109:18
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/debuggability.js:384:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:518:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:103:10)
+[33mghost_1  |[0m     at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:104:12)
+[33mghost_1  |[0m     at create (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:283:23)
+[33mghost_1  |[0m     at utils_1.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:34)
+[33mghost_1  |[0m     at Object.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/utils.js:53:24)
+[36mdb_1     |[0m thread_count=0
+[36mdb_1     |[0m connection_count=0
+[36mdb_1     |[0m It is possible that mysqld could use up to 
+[36mdb_1     |[0m key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 68197 K  bytes of memory
+[36mdb_1     |[0m Hope that's ok; if not, decrease some variables in the equation.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m Thread pointer: 0x0
+[36mdb_1     |[0m Attempting backtrace. You can use the following information to find out
+[36mdb_1     |[0m where mysqld died. If you see no messages after this, something went
+[36mdb_1     |[0m terribly wrong...
+[36mdb_1     |[0m stack_bottom = 0 thread_stack 0x40000
+[36mdb_1     |[0m mysqld(my_print_stacktrace+0x2c)[0x55c5fa4aa98c]
+[36mdb_1     |[0m mysqld(handle_fatal_signal+0x501)[0x55c5f9daaf71]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libpthread.so.0(+0x12730)[0x7f5045b27730]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x10b)[0x7f50456027bb]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(abort+0x121)[0x7f50455ed535]
+[36mdb_1     |[0m mysqld(+0x6c3e0f)[0x55c5f9d71e0f]
+[36mdb_1     |[0m mysqld(+0x6c41ed)[0x55c5f9d721ed]
+[36mdb_1     |[0m mysqld(+0x11cc6d6)[0x55c5fa87a6d6]
+[36mdb_1     |[0m mysqld(+0x11ccd8e)[0x55c5fa87ad8e]
+[36mdb_1     |[0m mysqld(_Z6fil_ioRK9IORequestbRK9page_id_tRK11page_size_tmmPvS8_+0x312)[0x55c5fa882892]
+[36mdb_1     |[0m mysqld(+0x118cfd8)[0x55c5fa83afd8]
+[36mdb_1     |[0m mysqld(_Z13buf_read_pageRK9page_id_tRK11page_size_t+0x31)[0x55c5fa83b601]
+[36mdb_1     |[0m mysqld(_Z16buf_page_get_genRK9page_id_tRK11page_size_tmP11buf_block_tmPKcmP5mtr_tb+0x409)[0x55c5fa80f589]
+[36mdb_1     |[0m mysqld(_Z31trx_rseg_get_n_undo_tablespacesPm+0x13e)[0x55c5fa7abe6e]
+[36mdb_1     |[0m mysqld(+0x10cebd7)[0x55c5fa77cbd7]
+[36mdb_1     |[0m mysqld(_Z34innobase_start_or_create_for_mysqlv+0x2f7f)[0x55c5fa7807af]
+[36mdb_1     |[0m mysqld(+0xfa4d20)[0x55c5fa652d20]
+[36mdb_1     |[0m mysqld(_Z24ha_initialize_handlertonP13st_plugin_int+0x55)[0x55c5f9dfcc35]
+[36mdb_1     |[0m mysqld(+0xbf7126)[0x55c5fa2a5126]
+[36mdb_1     |[0m mysqld(_Z40plugin_register_builtin_and_init_core_sePiPPc+0x1dc)[0x55c5fa2a6ffc]
+[36mdb_1     |[0m mysqld(+0x6f773e)[0x55c5f9da573e]
+[36mdb_1     |[0m mysqld(_Z11mysqld_mainiPPc+0x758)[0x55c5f9da6ba8]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xeb)[0x7f50455ef09b]
+[36mdb_1     |[0m mysqld(_start+0x2a)[0x55c5f9d9bbea]
+[36mdb_1     |[0m The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+[36mdb_1     |[0m information that should help you find out what is causing the crash.
+[36mdb_1     |[0m 2021-11-05 23:24:00+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05 23:24:00+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[36mdb_1     |[0m 2021-11-05 23:24:00+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05T23:24:01.035185Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+[36mdb_1     |[0m 2021-11-05T23:24:01.037897Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+[36mdb_1     |[0m 2021-11-05T23:24:01.045596Z 0 [Note] InnoDB: PUNCH HOLE support available
+[36mdb_1     |[0m 2021-11-05T23:24:01.045626Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+[36mdb_1     |[0m 2021-11-05T23:24:01.045632Z 0 [Note] InnoDB: Uses event mutexes
+[36mdb_1     |[0m 2021-11-05T23:24:01.045638Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+[36mdb_1     |[0m 2021-11-05T23:24:01.045642Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[36mdb_1     |[0m 2021-11-05T23:24:01.045647Z 0 [Note] InnoDB: Using Linux native AIO
+[36mdb_1     |[0m 2021-11-05T23:24:01.046056Z 0 [Note] InnoDB: Number of pools: 1
+[36mdb_1     |[0m 2021-11-05T23:24:01.046211Z 0 [Note] InnoDB: Using CPU crc32 instructions
+[36mdb_1     |[0m 2021-11-05T23:24:01.048612Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+[36mdb_1     |[0m 2021-11-05T23:24:01.074685Z 0 [Note] InnoDB: Completed initialization of buffer pool
+[33mghost_1  |[0m     at Promise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:17)
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/debuggability.js:303:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:483:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:79:10)
+[33mghost_1  |[0m     at callbackOrPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:306:12)
+[33mghost_1  |[0m     at Pool._create (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:236:9)
+[33mghost_1  |[0m     at Pool._doCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:208:36)
+[33mghost_1  |[0m     at Pool._tryAcquireOrCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:159:18)
+[33mghost_1  |[0m     at Pool.acquire (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:85:14)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:336:26
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Function.Promise.attempt.Promise.try (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/method.js:39:29)
+[33mghost_1  |[0m     at Client_MySQL.acquireConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:335:34)
+[33mghost_1  |[0m     at Runner.ensureConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:233:24)
+[33mghost_1  |[0m     at Runner.run (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:47:42)
+[33mghost_1  |[0m     at Builder.Target.then (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/interface.js:39:43)
+[33mghost_1  |[0m     at Builder.tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)[39m
+[33mghost_1  |[0m [39m
+[33mghost_1  |[0m [90m[39m
+[33mghost_1  |[0m (node:25) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+[33mghost_1  |[0m [2021-11-05 23:24:08] [31mERROR[39m
+[33mghost_1  |[0m [31m
+[33mghost_1  |[0m [31mNAME: RollbackError[39m
+[33mghost_1  |[0m [31mCODE: ECONNREFUSED[39m
+[33mghost_1  |[0m [31mMESSAGE: connect ECONNREFUSED 172.29.0.3:3306[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mlevel:[39m[37mnormal[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mOuterError: The server has encountered an error.[39m
+[33mghost_1  |[0m [37mRollbackError: connect ECONNREFUSED 172.29.0.3:3306
+[33mghost_1  |[0m     at RollbackError.KnexMigrateError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:7:26)
+[33mghost_1  |[0m     at new RollbackError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:32:26)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/index.js:212:23
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Promise._settlePromiseFromHandler (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:547:31)
+[33mghost_1  |[0m     at Promise._settlePromise (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:604:18)
+[33mghost_1  |[0m     at Promise._settlePromise0 (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:649:10)
+[33mghost_1  |[0m     at Promise._settlePromises (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:725:18)
+[36mdb_1     |[0m 2021-11-05T23:24:01.079675Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+[36mdb_1     |[0m 2021-11-05T23:24:01.092727Z 0 [ERROR] [FATAL] InnoDB: Table flags are 0 in the data dictionary but the flags in file ./ibdata1 are 0x4000!
+[36mdb_1     |[0m 2021-11-05 23:24:01 0x7f0d30926740  InnoDB: Assertion failure in thread 139694626203456 in file ut0ut.cc line 921
+[36mdb_1     |[0m InnoDB: We intentionally generate a memory trap.
+[36mdb_1     |[0m InnoDB: Submit a detailed bug report to http://bugs.mysql.com.
+[36mdb_1     |[0m InnoDB: If you get repeated assertion failures or crashes, even
+[36mdb_1     |[0m InnoDB: immediately after the mysqld startup, there may be
+[36mdb_1     |[0m InnoDB: corruption in the InnoDB tablespace. Please refer to
+[36mdb_1     |[0m InnoDB: http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html
+[36mdb_1     |[0m InnoDB: about forcing recovery.
+[36mdb_1     |[0m 23:24:01 UTC - mysqld got signal 6 ;
+[36mdb_1     |[0m This could be because you hit a bug. It is also possible that this binary
+[36mdb_1     |[0m or one of the libraries it was linked against is corrupt, improperly built,
+[36mdb_1     |[0m or misconfigured. This error can also be caused by malfunctioning hardware.
+[36mdb_1     |[0m Attempting to collect some information that could help diagnose the problem.
+[36mdb_1     |[0m As this is a crash and something is definitely wrong, the information
+[36mdb_1     |[0m collection process might fail.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m key_buffer_size=8388608
+[36mdb_1     |[0m read_buffer_size=131072
+[36mdb_1     |[0m max_used_connections=0
+[36mdb_1     |[0m max_threads=151
+[36mdb_1     |[0m thread_count=0
+[36mdb_1     |[0m connection_count=0
+[36mdb_1     |[0m It is possible that mysqld could use up to 
+[36mdb_1     |[0m key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 68197 K  bytes of memory
+[36mdb_1     |[0m Hope that's ok; if not, decrease some variables in the equation.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m Thread pointer: 0x0
+[33mghost_1  |[0m     at _drainQueueStep (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:93:12)
+[33mghost_1  |[0m     at _drainQueue (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:86:9)
+[33mghost_1  |[0m     at Async._drainQueues (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:102:5)
+[33mghost_1  |[0m     at Immediate.Async.drainQueues [as _onImmediate] (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:15:14)
+[33mghost_1  |[0m     at runCallback (timers.js:705:18)
+[33mghost_1  |[0m     at tryOnImmediate (timers.js:676:5)
+[33mghost_1  |[0m     at processImmediate (timers.js:658:5)
+[33mghost_1  |[0m 
+[33mghost_1  |[0m Error: connect ECONNREFUSED 172.29.0.3:3306
+[33mghost_1  |[0m     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+[33mghost_1  |[0m     --------------------
+[33mghost_1  |[0m     at Protocol._enqueue (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+[33mghost_1  |[0m     at Protocol.handshake (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+[33mghost_1  |[0m     at Connection.connect (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/Connection.js:130:18)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:109:18
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/debuggability.js:384:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:518:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:103:10)
+[33mghost_1  |[0m     at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:104:12)
+[33mghost_1  |[0m     at create (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:283:23)
+[33mghost_1  |[0m     at utils_1.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:34)
+[36mdb_1     |[0m Attempting backtrace. You can use the following information to find out
+[36mdb_1     |[0m where mysqld died. If you see no messages after this, something went
+[36mdb_1     |[0m terribly wrong...
+[36mdb_1     |[0m stack_bottom = 0 thread_stack 0x40000
+[36mdb_1     |[0m mysqld(my_print_stacktrace+0x2c)[0x55bcd517498c]
+[36mdb_1     |[0m mysqld(handle_fatal_signal+0x501)[0x55bcd4a74f71]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libpthread.so.0(+0x12730)[0x7f0d30e87730]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x10b)[0x7f0d309627bb]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(abort+0x121)[0x7f0d3094d535]
+[36mdb_1     |[0m mysqld(+0x6c3e0f)[0x55bcd4a3be0f]
+[36mdb_1     |[0m mysqld(+0x6c41ed)[0x55bcd4a3c1ed]
+[36mdb_1     |[0m mysqld(+0x11cc6d6)[0x55bcd55446d6]
+[36mdb_1     |[0m mysqld(+0x11ccd8e)[0x55bcd5544d8e]
+[36mdb_1     |[0m mysqld(_Z6fil_ioRK9IORequestbRK9page_id_tRK11page_size_tmmPvS8_+0x312)[0x55bcd554c892]
+[36mdb_1     |[0m mysqld(+0x118cfd8)[0x55bcd5504fd8]
+[36mdb_1     |[0m mysqld(_Z13buf_read_pageRK9page_id_tRK11page_size_t+0x31)[0x55bcd5505601]
+[36mdb_1     |[0m mysqld(_Z16buf_page_get_genRK9page_id_tRK11page_size_tmP11buf_block_tmPKcmP5mtr_tb+0x409)[0x55bcd54d9589]
+[36mdb_1     |[0m mysqld(_Z31trx_rseg_get_n_undo_tablespacesPm+0x13e)[0x55bcd5475e6e]
+[36mdb_1     |[0m mysqld(+0x10cebd7)[0x55bcd5446bd7]
+[36mdb_1     |[0m mysqld(_Z34innobase_start_or_create_for_mysqlv+0x2f7f)[0x55bcd544a7af]
+[36mdb_1     |[0m mysqld(+0xfa4d20)[0x55bcd531cd20]
+[36mdb_1     |[0m mysqld(_Z24ha_initialize_handlertonP13st_plugin_int+0x55)[0x55bcd4ac6c35]
+[36mdb_1     |[0m mysqld(+0xbf7126)[0x55bcd4f6f126]
+[36mdb_1     |[0m mysqld(_Z40plugin_register_builtin_and_init_core_sePiPPc+0x1dc)[0x55bcd4f70ffc]
+[36mdb_1     |[0m mysqld(+0x6f773e)[0x55bcd4a6f73e]
+[36mdb_1     |[0m mysqld(_Z11mysqld_mainiPPc+0x758)[0x55bcd4a70ba8]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xeb)[0x7f0d3094f09b]
+[36mdb_1     |[0m mysqld(_start+0x2a)[0x55bcd4a65bea]
+[36mdb_1     |[0m The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+[36mdb_1     |[0m information that should help you find out what is causing the crash.
+[36mdb_1     |[0m 2021-11-05 23:24:03+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05 23:24:03+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[33mghost_1  |[0m     at Object.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/utils.js:53:24)
+[33mghost_1  |[0m     at Promise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:17)
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/debuggability.js:303:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:483:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:79:10)
+[33mghost_1  |[0m     at callbackOrPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:306:12)
+[33mghost_1  |[0m     at Pool._create (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:236:9)
+[33mghost_1  |[0m     at Pool._doCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:208:36)
+[33mghost_1  |[0m     at Pool._tryAcquireOrCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:159:18)
+[33mghost_1  |[0m     at Pool.acquire (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:85:14)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:336:26
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Function.Promise.attempt.Promise.try (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/method.js:39:29)
+[33mghost_1  |[0m     at Client_MySQL.acquireConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:335:34)
+[33mghost_1  |[0m     at Runner.ensureConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:233:24)
+[33mghost_1  |[0m     at Runner.run (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:47:42)
+[33mghost_1  |[0m     at Builder.Target.then (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/interface.js:39:43)
+[33mghost_1  |[0m     at Builder.tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)[39m
+[33mghost_1  |[0m [39m
+[33mghost_1  |[0m [90m[39m
+[33mghost_1  |[0m (node:25) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+[36mdb_1     |[0m 2021-11-05 23:24:03+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05T23:24:04.283394Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+[36mdb_1     |[0m 2021-11-05T23:24:04.286749Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+[36mdb_1     |[0m 2021-11-05T23:24:04.293439Z 0 [Note] InnoDB: PUNCH HOLE support available
+[36mdb_1     |[0m 2021-11-05T23:24:04.293477Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+[36mdb_1     |[0m 2021-11-05T23:24:04.293487Z 0 [Note] InnoDB: Uses event mutexes
+[36mdb_1     |[0m 2021-11-05T23:24:04.293494Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+[36mdb_1     |[0m 2021-11-05T23:24:04.293499Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[36mdb_1     |[0m 2021-11-05T23:24:04.293504Z 0 [Note] InnoDB: Using Linux native AIO
+[36mdb_1     |[0m 2021-11-05T23:24:04.294019Z 0 [Note] InnoDB: Number of pools: 1
+[36mdb_1     |[0m 2021-11-05T23:24:04.294249Z 0 [Note] InnoDB: Using CPU crc32 instructions
+[36mdb_1     |[0m 2021-11-05T23:24:04.296934Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+[36mdb_1     |[0m 2021-11-05T23:24:04.323652Z 0 [Note] InnoDB: Completed initialization of buffer pool
+[36mdb_1     |[0m 2021-11-05T23:24:04.327914Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+[36mdb_1     |[0m 2021-11-05T23:24:04.340346Z 0 [ERROR] [FATAL] InnoDB: Table flags are 0 in the data dictionary but the flags in file ./ibdata1 are 0x4000!
+[36mdb_1     |[0m 2021-11-05 23:24:04 0x7f3ff8ee0740  InnoDB: Assertion failure in thread 139912736016192 in file ut0ut.cc line 921
+[36mdb_1     |[0m InnoDB: We intentionally generate a memory trap.
+[36mdb_1     |[0m InnoDB: Submit a detailed bug report to http://bugs.mysql.com.
+[36mdb_1     |[0m InnoDB: If you get repeated assertion failures or crashes, even
+[36mdb_1     |[0m InnoDB: immediately after the mysqld startup, there may be
+[36mdb_1     |[0m InnoDB: corruption in the InnoDB tablespace. Please refer to
+[36mdb_1     |[0m InnoDB: http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html
+[36mdb_1     |[0m InnoDB: about forcing recovery.
+[36mdb_1     |[0m 23:24:04 UTC - mysqld got signal 6 ;
+[36mdb_1     |[0m This could be because you hit a bug. It is also possible that this binary
+[36mdb_1     |[0m or one of the libraries it was linked against is corrupt, improperly built,
+[36mdb_1     |[0m or misconfigured. This error can also be caused by malfunctioning hardware.
+[36mdb_1     |[0m Attempting to collect some information that could help diagnose the problem.
+[36mdb_1     |[0m As this is a crash and something is definitely wrong, the information
+[36mdb_1     |[0m collection process might fail.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m key_buffer_size=8388608
+[36mdb_1     |[0m read_buffer_size=131072
+[36mdb_1     |[0m max_used_connections=0
+[36mdb_1     |[0m max_threads=151
+[36mdb_1     |[0m thread_count=0
+[36mdb_1     |[0m connection_count=0
+[36mdb_1     |[0m It is possible that mysqld could use up to 
+[33mghost_1  |[0m [2021-11-05 23:24:16] [31mERROR[39m
+[33mghost_1  |[0m [31m
+[33mghost_1  |[0m [31mNAME: RollbackError[39m
+[33mghost_1  |[0m [31mCODE: ECONNREFUSED[39m
+[33mghost_1  |[0m [31mMESSAGE: connect ECONNREFUSED 172.29.0.3:3306[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mlevel:[39m[37mnormal[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mOuterError: The server has encountered an error.[39m
+[33mghost_1  |[0m [37mRollbackError: connect ECONNREFUSED 172.29.0.3:3306
+[33mghost_1  |[0m     at RollbackError.KnexMigrateError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:7:26)
+[33mghost_1  |[0m     at new RollbackError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:32:26)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/index.js:212:23
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Promise._settlePromiseFromHandler (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:547:31)
+[33mghost_1  |[0m     at Promise._settlePromise (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:604:18)
+[33mghost_1  |[0m     at Promise._settlePromise0 (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:649:10)
+[33mghost_1  |[0m     at Promise._settlePromises (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:725:18)
+[36mdb_1     |[0m key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 68197 K  bytes of memory
+[36mdb_1     |[0m Hope that's ok; if not, decrease some variables in the equation.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m Thread pointer: 0x0
+[36mdb_1     |[0m Attempting backtrace. You can use the following information to find out
+[36mdb_1     |[0m where mysqld died. If you see no messages after this, something went
+[36mdb_1     |[0m terribly wrong...
+[36mdb_1     |[0m stack_bottom = 0 thread_stack 0x40000
+[36mdb_1     |[0m mysqld(my_print_stacktrace+0x2c)[0x564a35a7198c]
+[36mdb_1     |[0m mysqld(handle_fatal_signal+0x501)[0x564a35371f71]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libpthread.so.0(+0x12730)[0x7f3ff9441730]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x10b)[0x7f3ff8f1c7bb]
+[33mghost_1  |[0m     at _drainQueueStep (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:93:12)
+[33mghost_1  |[0m     at _drainQueue (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:86:9)
+[33mghost_1  |[0m     at Async._drainQueues (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:102:5)
+[33mghost_1  |[0m     at Immediate.Async.drainQueues [as _onImmediate] (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:15:14)
+[33mghost_1  |[0m     at runCallback (timers.js:705:18)
+[33mghost_1  |[0m     at tryOnImmediate (timers.js:676:5)
+[33mghost_1  |[0m     at processImmediate (timers.js:658:5)
+[33mghost_1  |[0m 
+[33mghost_1  |[0m Error: connect ECONNREFUSED 172.29.0.3:3306
+[33mghost_1  |[0m     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+[33mghost_1  |[0m     --------------------
+[33mghost_1  |[0m     at Protocol._enqueue (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+[33mghost_1  |[0m     at Protocol.handshake (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+[33mghost_1  |[0m     at Connection.connect (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/Connection.js:130:18)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:109:18
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/debuggability.js:384:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:518:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:103:10)
+[33mghost_1  |[0m     at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:104:12)
+[33mghost_1  |[0m     at create (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:283:23)
+[33mghost_1  |[0m     at utils_1.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:34)
+[33mghost_1  |[0m     at Object.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/utils.js:53:24)
+[33mghost_1  |[0m     at Promise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:17)
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/debuggability.js:303:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:483:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:79:10)
+[33mghost_1  |[0m     at callbackOrPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:306:12)
+[33mghost_1  |[0m     at Pool._create (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:236:9)
+[33mghost_1  |[0m     at Pool._doCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:208:36)
+[33mghost_1  |[0m     at Pool._tryAcquireOrCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:159:18)
+[33mghost_1  |[0m     at Pool.acquire (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:85:14)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:336:26
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Function.Promise.attempt.Promise.try (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/method.js:39:29)
+[33mghost_1  |[0m     at Client_MySQL.acquireConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:335:34)
+[33mghost_1  |[0m     at Runner.ensureConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:233:24)
+[33mghost_1  |[0m     at Runner.run (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:47:42)
+[33mghost_1  |[0m     at Builder.Target.then (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/interface.js:39:43)
+[33mghost_1  |[0m     at Builder.tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)[39m
+[33mghost_1  |[0m [39m
+[33mghost_1  |[0m [90m[39m
+[33mghost_1  |[0m (node:27) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(abort+0x121)[0x7f3ff8f07535]
+[36mdb_1     |[0m mysqld(+0x6c3e0f)[0x564a35338e0f]
+[36mdb_1     |[0m mysqld(+0x6c41ed)[0x564a353391ed]
+[36mdb_1     |[0m mysqld(+0x11cc6d6)[0x564a35e416d6]
+[36mdb_1     |[0m mysqld(+0x11ccd8e)[0x564a35e41d8e]
+[36mdb_1     |[0m mysqld(_Z6fil_ioRK9IORequestbRK9page_id_tRK11page_size_tmmPvS8_+0x312)[0x564a35e49892]
+[36mdb_1     |[0m mysqld(+0x118cfd8)[0x564a35e01fd8]
+[36mdb_1     |[0m mysqld(_Z13buf_read_pageRK9page_id_tRK11page_size_t+0x31)[0x564a35e02601]
+[36mdb_1     |[0m mysqld(_Z16buf_page_get_genRK9page_id_tRK11page_size_tmP11buf_block_tmPKcmP5mtr_tb+0x409)[0x564a35dd6589]
+[36mdb_1     |[0m mysqld(_Z31trx_rseg_get_n_undo_tablespacesPm+0x13e)[0x564a35d72e6e]
+[36mdb_1     |[0m mysqld(+0x10cebd7)[0x564a35d43bd7]
+[36mdb_1     |[0m mysqld(_Z34innobase_start_or_create_for_mysqlv+0x2f7f)[0x564a35d477af]
+[36mdb_1     |[0m mysqld(+0xfa4d20)[0x564a35c19d20]
+[36mdb_1     |[0m mysqld(_Z24ha_initialize_handlertonP13st_plugin_int+0x55)[0x564a353c3c35]
+[36mdb_1     |[0m mysqld(+0xbf7126)[0x564a3586c126]
+[36mdb_1     |[0m mysqld(_Z40plugin_register_builtin_and_init_core_sePiPPc+0x1dc)[0x564a3586dffc]
+[36mdb_1     |[0m mysqld(+0x6f773e)[0x564a3536c73e]
+[36mdb_1     |[0m mysqld(_Z11mysqld_mainiPPc+0x758)[0x564a3536dba8]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xeb)[0x7f3ff8f0909b]
+[36mdb_1     |[0m mysqld(_start+0x2a)[0x564a35362bea]
+[36mdb_1     |[0m The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+[36mdb_1     |[0m information that should help you find out what is causing the crash.
+[36mdb_1     |[0m 2021-11-05 23:24:08+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05 23:24:08+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[36mdb_1     |[0m 2021-11-05 23:24:08+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05T23:24:08.906883Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+[36mdb_1     |[0m 2021-11-05T23:24:08.910225Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+[36mdb_1     |[0m 2021-11-05T23:24:08.915812Z 0 [Note] InnoDB: PUNCH HOLE support available
+[36mdb_1     |[0m 2021-11-05T23:24:08.915836Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+[36mdb_1     |[0m 2021-11-05T23:24:08.915843Z 0 [Note] InnoDB: Uses event mutexes
+[36mdb_1     |[0m 2021-11-05T23:24:08.915855Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+[36mdb_1     |[0m 2021-11-05T23:24:08.915866Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[36mdb_1     |[0m 2021-11-05T23:24:08.915874Z 0 [Note] InnoDB: Using Linux native AIO
+[36mdb_1     |[0m 2021-11-05T23:24:08.916344Z 0 [Note] InnoDB: Number of pools: 1
+[36mdb_1     |[0m 2021-11-05T23:24:08.916553Z 0 [Note] InnoDB: Using CPU crc32 instructions
+[33mghost_1  |[0m [2021-11-05 23:24:30] [31mERROR[39m
+[33mghost_1  |[0m [31m
+[33mghost_1  |[0m [31mNAME: RollbackError[39m
+[33mghost_1  |[0m [31mCODE: EAI_AGAIN[39m
+[33mghost_1  |[0m [31mMESSAGE: getaddrinfo EAI_AGAIN db db:3306[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mlevel:[39m[37mnormal[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mOuterError: The server has encountered an error.[39m
+[33mghost_1  |[0m [37mRollbackError: getaddrinfo EAI_AGAIN db db:3306
+[33mghost_1  |[0m     at RollbackError.KnexMigrateError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:7:26)
+[33mghost_1  |[0m     at new RollbackError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:32:26)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/index.js:212:23
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Promise._settlePromiseFromHandler (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:547:31)
+[33mghost_1  |[0m     at Promise._settlePromise (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:604:18)
+[33mghost_1  |[0m     at Promise._settlePromise0 (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:649:10)
+[33mghost_1  |[0m     at Promise._settlePromises (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:725:18)
+[33mghost_1  |[0m     at _drainQueueStep (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:93:12)
+[33mghost_1  |[0m     at _drainQueue (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:86:9)
+[36mdb_1     |[0m 2021-11-05T23:24:08.919439Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+[36mdb_1     |[0m 2021-11-05T23:24:08.942283Z 0 [Note] InnoDB: Completed initialization of buffer pool
+[36mdb_1     |[0m 2021-11-05T23:24:08.946898Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+[36mdb_1     |[0m 2021-11-05T23:24:08.959148Z 0 [ERROR] [FATAL] InnoDB: Table flags are 0 in the data dictionary but the flags in file ./ibdata1 are 0x4000!
+[36mdb_1     |[0m 2021-11-05 23:24:08 0x7fe8c573c740  InnoDB: Assertion failure in thread 140637721839424 in file ut0ut.cc line 921
+[36mdb_1     |[0m InnoDB: We intentionally generate a memory trap.
+[36mdb_1     |[0m InnoDB: Submit a detailed bug report to http://bugs.mysql.com.
+[36mdb_1     |[0m InnoDB: If you get repeated assertion failures or crashes, even
+[36mdb_1     |[0m InnoDB: immediately after the mysqld startup, there may be
+[36mdb_1     |[0m InnoDB: corruption in the InnoDB tablespace. Please refer to
+[36mdb_1     |[0m InnoDB: http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html
+[36mdb_1     |[0m InnoDB: about forcing recovery.
+[36mdb_1     |[0m 23:24:08 UTC - mysqld got signal 6 ;
+[36mdb_1     |[0m This could be because you hit a bug. It is also possible that this binary
+[36mdb_1     |[0m or one of the libraries it was linked against is corrupt, improperly built,
+[36mdb_1     |[0m or misconfigured. This error can also be caused by malfunctioning hardware.
+[36mdb_1     |[0m Attempting to collect some information that could help diagnose the problem.
+[36mdb_1     |[0m As this is a crash and something is definitely wrong, the information
+[36mdb_1     |[0m collection process might fail.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m key_buffer_size=8388608
+[36mdb_1     |[0m read_buffer_size=131072
+[36mdb_1     |[0m max_used_connections=0
+[36mdb_1     |[0m max_threads=151
+[36mdb_1     |[0m thread_count=0
+[36mdb_1     |[0m connection_count=0
+[36mdb_1     |[0m It is possible that mysqld could use up to 
+[36mdb_1     |[0m key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 68197 K  bytes of memory
+[36mdb_1     |[0m Hope that's ok; if not, decrease some variables in the equation.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m Thread pointer: 0x0
+[36mdb_1     |[0m Attempting backtrace. You can use the following information to find out
+[36mdb_1     |[0m where mysqld died. If you see no messages after this, something went
+[36mdb_1     |[0m terribly wrong...
+[36mdb_1     |[0m stack_bottom = 0 thread_stack 0x40000
+[36mdb_1     |[0m mysqld(my_print_stacktrace+0x2c)[0x5557d268498c]
+[36mdb_1     |[0m mysqld(handle_fatal_signal+0x501)[0x5557d1f84f71]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libpthread.so.0(+0x12730)[0x7fe8c5c9d730]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x10b)[0x7fe8c57787bb]
+[33mghost_1  |[0m     at Async._drainQueues (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:102:5)
+[33mghost_1  |[0m     at Immediate.Async.drainQueues [as _onImmediate] (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:15:14)
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(abort+0x121)[0x7fe8c5763535]
+[36mdb_1     |[0m mysqld(+0x6c3e0f)[0x5557d1f4be0f]
+[36mdb_1     |[0m mysqld(+0x6c41ed)[0x5557d1f4c1ed]
+[36mdb_1     |[0m mysqld(+0x11cc6d6)[0x5557d2a546d6]
+[36mdb_1     |[0m mysqld(+0x11ccd8e)[0x5557d2a54d8e]
+[36mdb_1     |[0m mysqld(_Z6fil_ioRK9IORequestbRK9page_id_tRK11page_size_tmmPvS8_+0x312)[0x5557d2a5c892]
+[36mdb_1     |[0m mysqld(+0x118cfd8)[0x5557d2a14fd8]
+[36mdb_1     |[0m mysqld(_Z13buf_read_pageRK9page_id_tRK11page_size_t+0x31)[0x5557d2a15601]
+[36mdb_1     |[0m mysqld(_Z16buf_page_get_genRK9page_id_tRK11page_size_tmP11buf_block_tmPKcmP5mtr_tb+0x409)[0x5557d29e9589]
+[36mdb_1     |[0m mysqld(_Z31trx_rseg_get_n_undo_tablespacesPm+0x13e)[0x5557d2985e6e]
+[36mdb_1     |[0m mysqld(+0x10cebd7)[0x5557d2956bd7]
+[36mdb_1     |[0m mysqld(_Z34innobase_start_or_create_for_mysqlv+0x2f7f)[0x5557d295a7af]
+[36mdb_1     |[0m mysqld(+0xfa4d20)[0x5557d282cd20]
+[36mdb_1     |[0m mysqld(_Z24ha_initialize_handlertonP13st_plugin_int+0x55)[0x5557d1fd6c35]
+[36mdb_1     |[0m mysqld(+0xbf7126)[0x5557d247f126]
+[36mdb_1     |[0m mysqld(_Z40plugin_register_builtin_and_init_core_sePiPPc+0x1dc)[0x5557d2480ffc]
+[36mdb_1     |[0m mysqld(+0x6f773e)[0x5557d1f7f73e]
+[36mdb_1     |[0m mysqld(_Z11mysqld_mainiPPc+0x758)[0x5557d1f80ba8]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xeb)[0x7fe8c576509b]
+[36mdb_1     |[0m mysqld(_start+0x2a)[0x5557d1f75bea]
+[36mdb_1     |[0m The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+[36mdb_1     |[0m information that should help you find out what is causing the crash.
+[36mdb_1     |[0m 2021-11-05 23:24:16+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05 23:24:16+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[36mdb_1     |[0m 2021-11-05 23:24:16+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05T23:24:16.773787Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+[36mdb_1     |[0m 2021-11-05T23:24:16.776514Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+[36mdb_1     |[0m 2021-11-05T23:24:16.782200Z 0 [Note] InnoDB: PUNCH HOLE support available
+[36mdb_1     |[0m 2021-11-05T23:24:16.782227Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+[36mdb_1     |[0m 2021-11-05T23:24:16.782236Z 0 [Note] InnoDB: Uses event mutexes
+[33mghost_1  |[0m     at runCallback (timers.js:705:18)
+[33mghost_1  |[0m     at tryOnImmediate (timers.js:676:5)
+[33mghost_1  |[0m     at processImmediate (timers.js:658:5)
+[33mghost_1  |[0m 
+[33mghost_1  |[0m Error: getaddrinfo EAI_AGAIN db db:3306
+[33mghost_1  |[0m     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+[33mghost_1  |[0m     --------------------
+[33mghost_1  |[0m     at Protocol._enqueue (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+[33mghost_1  |[0m     at Protocol.handshake (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+[33mghost_1  |[0m     at Connection.connect (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/Connection.js:130:18)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:109:18
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/debuggability.js:384:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:518:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:103:10)
+[33mghost_1  |[0m     at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:104:12)
+[33mghost_1  |[0m     at create (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:283:23)
+[33mghost_1  |[0m     at utils_1.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:34)
+[33mghost_1  |[0m     at Object.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/utils.js:53:24)
+[33mghost_1  |[0m     at Promise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:17)
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/debuggability.js:303:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:483:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:79:10)
+[33mghost_1  |[0m     at callbackOrPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:306:12)
+[33mghost_1  |[0m     at Pool._create (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:236:9)
+[33mghost_1  |[0m     at Pool._doCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:208:36)
+[33mghost_1  |[0m     at Pool._tryAcquireOrCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:159:18)
+[33mghost_1  |[0m     at Pool.acquire (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:85:14)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:336:26
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Function.Promise.attempt.Promise.try (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/method.js:39:29)
+[33mghost_1  |[0m     at Client_MySQL.acquireConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:335:34)
+[33mghost_1  |[0m     at Runner.ensureConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:233:24)
+[33mghost_1  |[0m     at Runner.run (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:47:42)
+[33mghost_1  |[0m     at Builder.Target.then (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/interface.js:39:43)
+[33mghost_1  |[0m     at Builder.tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)[39m
+[36mdb_1     |[0m 2021-11-05T23:24:16.782244Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+[36mdb_1     |[0m 2021-11-05T23:24:16.782251Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[36mdb_1     |[0m 2021-11-05T23:24:16.782258Z 0 [Note] InnoDB: Using Linux native AIO
+[36mdb_1     |[0m 2021-11-05T23:24:16.782671Z 0 [Note] InnoDB: Number of pools: 1
+[36mdb_1     |[0m 2021-11-05T23:24:16.782878Z 0 [Note] InnoDB: Using CPU crc32 instructions
+[36mdb_1     |[0m 2021-11-05T23:24:16.785491Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+[36mdb_1     |[0m 2021-11-05T23:24:16.806655Z 0 [Note] InnoDB: Completed initialization of buffer pool
+[36mdb_1     |[0m 2021-11-05T23:24:16.810500Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+[36mdb_1     |[0m 2021-11-05T23:24:16.822630Z 0 [ERROR] [FATAL] InnoDB: Table flags are 0 in the data dictionary but the flags in file ./ibdata1 are 0x4000!
+[36mdb_1     |[0m 2021-11-05 23:24:16 0x7f44b099c740  InnoDB: Assertion failure in thread 139932997371712 in file ut0ut.cc line 921
+[36mdb_1     |[0m InnoDB: We intentionally generate a memory trap.
+[36mdb_1     |[0m InnoDB: Submit a detailed bug report to http://bugs.mysql.com.
+[36mdb_1     |[0m InnoDB: If you get repeated assertion failures or crashes, even
+[36mdb_1     |[0m InnoDB: immediately after the mysqld startup, there may be
+[36mdb_1     |[0m InnoDB: corruption in the InnoDB tablespace. Please refer to
+[36mdb_1     |[0m InnoDB: http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html
+[36mdb_1     |[0m InnoDB: about forcing recovery.
+[36mdb_1     |[0m 23:24:16 UTC - mysqld got signal 6 ;
+[36mdb_1     |[0m This could be because you hit a bug. It is also possible that this binary
+[36mdb_1     |[0m or one of the libraries it was linked against is corrupt, improperly built,
+[36mdb_1     |[0m or misconfigured. This error can also be caused by malfunctioning hardware.
+[36mdb_1     |[0m Attempting to collect some information that could help diagnose the problem.
+[36mdb_1     |[0m As this is a crash and something is definitely wrong, the information
+[33mghost_1  |[0m [39m
+[33mghost_1  |[0m [90m[39m
+[33mghost_1  |[0m (node:24) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+[33mghost_1  |[0m [2021-11-05 23:24:42] [31mERROR[39m
+[33mghost_1  |[0m [31m
+[33mghost_1  |[0m [31mNAME: RollbackError[39m
+[33mghost_1  |[0m [31mCODE: EAI_AGAIN[39m
+[33mghost_1  |[0m [31mMESSAGE: getaddrinfo EAI_AGAIN db db:3306[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mlevel:[39m[37mnormal[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mOuterError: The server has encountered an error.[39m
+[33mghost_1  |[0m [37mRollbackError: getaddrinfo EAI_AGAIN db db:3306
+[33mghost_1  |[0m     at RollbackError.KnexMigrateError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:7:26)
+[33mghost_1  |[0m     at new RollbackError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:32:26)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/index.js:212:23
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Promise._settlePromiseFromHandler (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:547:31)
+[33mghost_1  |[0m     at Promise._settlePromise (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:604:18)
+[33mghost_1  |[0m     at Promise._settlePromise0 (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:649:10)
+[33mghost_1  |[0m     at Promise._settlePromises (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:725:18)
+[33mghost_1  |[0m     at _drainQueueStep (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:93:12)
+[33mghost_1  |[0m     at _drainQueue (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:86:9)
+[33mghost_1  |[0m     at Async._drainQueues (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:102:5)
+[33mghost_1  |[0m     at Immediate.Async.drainQueues [as _onImmediate] (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:15:14)
+[33mghost_1  |[0m     at runCallback (timers.js:705:18)
+[33mghost_1  |[0m     at tryOnImmediate (timers.js:676:5)
+[33mghost_1  |[0m     at processImmediate (timers.js:658:5)
+[33mghost_1  |[0m 
+[33mghost_1  |[0m Error: getaddrinfo EAI_AGAIN db db:3306
+[33mghost_1  |[0m     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+[33mghost_1  |[0m     --------------------
+[36mdb_1     |[0m collection process might fail.
+[33mghost_1  |[0m     at Protocol._enqueue (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+[36mdb_1     |[0m 
+[33mghost_1  |[0m     at Protocol.handshake (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+[33mghost_1  |[0m     at Connection.connect (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/Connection.js:130:18)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:109:18
+[36mdb_1     |[0m key_buffer_size=8388608
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/debuggability.js:384:9)
+[36mdb_1     |[0m read_buffer_size=131072
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:518:18)
+[36mdb_1     |[0m max_used_connections=0
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:103:10)
+[36mdb_1     |[0m max_threads=151
+[33mghost_1  |[0m     at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:104:12)
+[36mdb_1     |[0m thread_count=0
+[33mghost_1  |[0m     at create (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:283:23)
+[36mdb_1     |[0m connection_count=0
+[33mghost_1  |[0m     at utils_1.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:34)
+[33mghost_1  |[0m     at Object.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/utils.js:53:24)
+[33mghost_1  |[0m     at Promise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:17)
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/debuggability.js:303:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:483:18)
+[36mdb_1     |[0m It is possible that mysqld could use up to 
+[36mdb_1     |[0m key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 68197 K  bytes of memory
+[36mdb_1     |[0m Hope that's ok; if not, decrease some variables in the equation.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m Thread pointer: 0x0
+[36mdb_1     |[0m Attempting backtrace. You can use the following information to find out
+[36mdb_1     |[0m where mysqld died. If you see no messages after this, something went
+[36mdb_1     |[0m terribly wrong...
+[36mdb_1     |[0m stack_bottom = 0 thread_stack 0x40000
+[36mdb_1     |[0m mysqld(my_print_stacktrace+0x2c)[0x55936968498c]
+[36mdb_1     |[0m mysqld(handle_fatal_signal+0x501)[0x559368f84f71]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libpthread.so.0(+0x12730)[0x7f44b0efd730]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x10b)[0x7f44b09d87bb]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(abort+0x121)[0x7f44b09c3535]
+[36mdb_1     |[0m mysqld(+0x6c3e0f)[0x559368f4be0f]
+[36mdb_1     |[0m mysqld(+0x6c41ed)[0x559368f4c1ed]
+[36mdb_1     |[0m mysqld(+0x11cc6d6)[0x559369a546d6]
+[36mdb_1     |[0m mysqld(+0x11ccd8e)[0x559369a54d8e]
+[36mdb_1     |[0m mysqld(_Z6fil_ioRK9IORequestbRK9page_id_tRK11page_size_tmmPvS8_+0x312)[0x559369a5c892]
+[36mdb_1     |[0m mysqld(+0x118cfd8)[0x559369a14fd8]
+[36mdb_1     |[0m mysqld(_Z13buf_read_pageRK9page_id_tRK11page_size_t+0x31)[0x559369a15601]
+[36mdb_1     |[0m mysqld(_Z16buf_page_get_genRK9page_id_tRK11page_size_tmP11buf_block_tmPKcmP5mtr_tb+0x409)[0x5593699e9589]
+[36mdb_1     |[0m mysqld(_Z31trx_rseg_get_n_undo_tablespacesPm+0x13e)[0x559369985e6e]
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:79:10)
+[33mghost_1  |[0m     at callbackOrPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:306:12)
+[33mghost_1  |[0m     at Pool._create (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:236:9)
+[33mghost_1  |[0m     at Pool._doCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:208:36)
+[33mghost_1  |[0m     at Pool._tryAcquireOrCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:159:18)
+[33mghost_1  |[0m     at Pool.acquire (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:85:14)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:336:26
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Function.Promise.attempt.Promise.try (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/method.js:39:29)
+[33mghost_1  |[0m     at Client_MySQL.acquireConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:335:34)
+[33mghost_1  |[0m     at Runner.ensureConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:233:24)
+[33mghost_1  |[0m     at Runner.run (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:47:42)
+[33mghost_1  |[0m     at Builder.Target.then (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/interface.js:39:43)
+[33mghost_1  |[0m     at Builder.tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)[39m
+[33mghost_1  |[0m [39m
+[33mghost_1  |[0m [90m[39m
+[33mghost_1  |[0m (node:24) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+[33mghost_1  |[0m [2021-11-05 23:24:55] [31mERROR[39m
+[33mghost_1  |[0m [31m
+[33mghost_1  |[0m [31mNAME: RollbackError[39m
+[33mghost_1  |[0m [31mCODE: EAI_AGAIN[39m
+[33mghost_1  |[0m [31mMESSAGE: getaddrinfo EAI_AGAIN db db:3306[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mlevel:[39m[37mnormal[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mOuterError: The server has encountered an error.[39m
+[36mdb_1     |[0m mysqld(+0x10cebd7)[0x559369956bd7]
+[36mdb_1     |[0m mysqld(_Z34innobase_start_or_create_for_mysqlv+0x2f7f)[0x55936995a7af]
+[36mdb_1     |[0m mysqld(+0xfa4d20)[0x55936982cd20]
+[36mdb_1     |[0m mysqld(_Z24ha_initialize_handlertonP13st_plugin_int+0x55)[0x559368fd6c35]
+[33mghost_1  |[0m [37mRollbackError: getaddrinfo EAI_AGAIN db db:3306
+[36mdb_1     |[0m mysqld(+0xbf7126)[0x55936947f126]
+[33mghost_1  |[0m     at RollbackError.KnexMigrateError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:7:26)
+[33mghost_1  |[0m     at new RollbackError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:32:26)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/index.js:212:23
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)
+[36mdb_1     |[0m mysqld(_Z40plugin_register_builtin_and_init_core_sePiPPc+0x1dc)[0x559369480ffc]
+[33mghost_1  |[0m     at Promise._settlePromiseFromHandler (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:547:31)
+[36mdb_1     |[0m mysqld(+0x6f773e)[0x559368f7f73e]
+[33mghost_1  |[0m     at Promise._settlePromise (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:604:18)
+[36mdb_1     |[0m mysqld(_Z11mysqld_mainiPPc+0x758)[0x559368f80ba8]
+[33mghost_1  |[0m     at Promise._settlePromise0 (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:649:10)
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xeb)[0x7f44b09c509b]
+[33mghost_1  |[0m     at Promise._settlePromises (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:725:18)
+[36mdb_1     |[0m mysqld(_start+0x2a)[0x559368f75bea]
+[33mghost_1  |[0m     at _drainQueueStep (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:93:12)
+[36mdb_1     |[0m The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+[33mghost_1  |[0m     at _drainQueue (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:86:9)
+[36mdb_1     |[0m information that should help you find out what is causing the crash.
+[33mghost_1  |[0m     at Async._drainQueues (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:102:5)
+[36mdb_1     |[0m 2021-11-05 23:24:30+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[33mghost_1  |[0m     at Immediate.Async.drainQueues [as _onImmediate] (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:15:14)
+[36mdb_1     |[0m 2021-11-05 23:24:30+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[33mghost_1  |[0m     at runCallback (timers.js:705:18)
+[36mdb_1     |[0m 2021-11-05 23:24:30+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[33mghost_1  |[0m     at tryOnImmediate (timers.js:676:5)
+[36mdb_1     |[0m 2021-11-05T23:24:31.363405Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+[33mghost_1  |[0m     at processImmediate (timers.js:658:5)
+[36mdb_1     |[0m 2021-11-05T23:24:31.366160Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+[33mghost_1  |[0m 
+[36mdb_1     |[0m 2021-11-05T23:24:31.372358Z 0 [Note] InnoDB: PUNCH HOLE support available
+[33mghost_1  |[0m Error: getaddrinfo EAI_AGAIN db db:3306
+[36mdb_1     |[0m 2021-11-05T23:24:31.372475Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+[33mghost_1  |[0m     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+[36mdb_1     |[0m 2021-11-05T23:24:31.372531Z 0 [Note] InnoDB: Uses event mutexes
+[33mghost_1  |[0m     --------------------
+[36mdb_1     |[0m 2021-11-05T23:24:31.372594Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+[33mghost_1  |[0m     at Protocol._enqueue (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+[36mdb_1     |[0m 2021-11-05T23:24:31.372612Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[33mghost_1  |[0m     at Protocol.handshake (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+[36mdb_1     |[0m 2021-11-05T23:24:31.372620Z 0 [Note] InnoDB: Using Linux native AIO
+[33mghost_1  |[0m     at Connection.connect (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/Connection.js:130:18)
+[36mdb_1     |[0m 2021-11-05T23:24:31.373172Z 0 [Note] InnoDB: Number of pools: 1
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:109:18
+[36mdb_1     |[0m 2021-11-05T23:24:31.373369Z 0 [Note] InnoDB: Using CPU crc32 instructions
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/debuggability.js:384:9)
+[36mdb_1     |[0m 2021-11-05T23:24:31.376249Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:518:18)
+[36mdb_1     |[0m 2021-11-05T23:24:31.399992Z 0 [Note] InnoDB: Completed initialization of buffer pool
+[36mdb_1     |[0m 2021-11-05T23:24:31.404257Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+[36mdb_1     |[0m 2021-11-05T23:24:31.416126Z 0 [ERROR] [FATAL] InnoDB: Table flags are 0 in the data dictionary but the flags in file ./ibdata1 are 0x4000!
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:103:10)
+[36mdb_1     |[0m 2021-11-05 23:24:31 0x7f70004a6740  InnoDB: Assertion failure in thread 140119017940800 in file ut0ut.cc line 921
+[33mghost_1  |[0m     at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:104:12)
+[36mdb_1     |[0m InnoDB: We intentionally generate a memory trap.
+[36mdb_1     |[0m InnoDB: Submit a detailed bug report to http://bugs.mysql.com.
+[33mghost_1  |[0m     at create (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:283:23)
+[36mdb_1     |[0m InnoDB: If you get repeated assertion failures or crashes, even
+[33mghost_1  |[0m     at utils_1.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:34)
+[36mdb_1     |[0m InnoDB: immediately after the mysqld startup, there may be
+[33mghost_1  |[0m     at Object.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/utils.js:53:24)
+[36mdb_1     |[0m InnoDB: corruption in the InnoDB tablespace. Please refer to
+[33mghost_1  |[0m     at Promise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:17)
+[36mdb_1     |[0m InnoDB: http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/debuggability.js:303:9)
+[36mdb_1     |[0m InnoDB: about forcing recovery.
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:483:18)
+[36mdb_1     |[0m 23:24:31 UTC - mysqld got signal 6 ;
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:79:10)
+[36mdb_1     |[0m This could be because you hit a bug. It is also possible that this binary
+[33mghost_1  |[0m     at callbackOrPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:306:12)
+[36mdb_1     |[0m or one of the libraries it was linked against is corrupt, improperly built,
+[36mdb_1     |[0m or misconfigured. This error can also be caused by malfunctioning hardware.
+[33mghost_1  |[0m     at Pool._create (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:236:9)
+[33mghost_1  |[0m     at Pool._doCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:208:36)
+[36mdb_1     |[0m Attempting to collect some information that could help diagnose the problem.
+[36mdb_1     |[0m As this is a crash and something is definitely wrong, the information
+[36mdb_1     |[0m collection process might fail.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m key_buffer_size=8388608
+[36mdb_1     |[0m read_buffer_size=131072
+[36mdb_1     |[0m max_used_connections=0
+[36mdb_1     |[0m max_threads=151
+[36mdb_1     |[0m thread_count=0
+[36mdb_1     |[0m connection_count=0
+[33mghost_1  |[0m     at Pool._tryAcquireOrCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:159:18)
+[36mdb_1     |[0m It is possible that mysqld could use up to 
+[33mghost_1  |[0m     at Pool.acquire (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:85:14)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:336:26
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Function.Promise.attempt.Promise.try (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/method.js:39:29)
+[33mghost_1  |[0m     at Client_MySQL.acquireConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:335:34)
+[33mghost_1  |[0m     at Runner.ensureConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:233:24)
+[33mghost_1  |[0m     at Runner.run (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:47:42)
+[33mghost_1  |[0m     at Builder.Target.then (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/interface.js:39:43)
+[33mghost_1  |[0m     at Builder.tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)[39m
+[33mghost_1  |[0m [39m
+[33mghost_1  |[0m [90m[39m
+[33mghost_1  |[0m (node:26) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+[33mghost_1  |[0m [2021-11-05 23:24:58] [31mERROR[39m
+[33mghost_1  |[0m [31m
+[33mghost_1  |[0m [31mNAME: RollbackError[39m
+[33mghost_1  |[0m [31mCODE: ECONNREFUSED[39m
+[33mghost_1  |[0m [31mMESSAGE: connect ECONNREFUSED 172.29.0.3:3306[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mlevel:[39m[37mnormal[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mOuterError: The server has encountered an error.[39m
+[36mdb_1     |[0m key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 68197 K  bytes of memory
+[36mdb_1     |[0m Hope that's ok; if not, decrease some variables in the equation.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m Thread pointer: 0x0
+[36mdb_1     |[0m Attempting backtrace. You can use the following information to find out
+[36mdb_1     |[0m where mysqld died. If you see no messages after this, something went
+[36mdb_1     |[0m terribly wrong...
+[36mdb_1     |[0m stack_bottom = 0 thread_stack 0x40000
+[36mdb_1     |[0m mysqld(my_print_stacktrace+0x2c)[0x56087887c98c]
+[36mdb_1     |[0m mysqld(handle_fatal_signal+0x501)[0x56087817cf71]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libpthread.so.0(+0x12730)[0x7f7000a07730]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x10b)[0x7f70004e27bb]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(abort+0x121)[0x7f70004cd535]
+[36mdb_1     |[0m mysqld(+0x6c3e0f)[0x560878143e0f]
+[36mdb_1     |[0m mysqld(+0x6c41ed)[0x5608781441ed]
+[36mdb_1     |[0m mysqld(+0x11cc6d6)[0x560878c4c6d6]
+[36mdb_1     |[0m mysqld(+0x11ccd8e)[0x560878c4cd8e]
+[36mdb_1     |[0m mysqld(_Z6fil_ioRK9IORequestbRK9page_id_tRK11page_size_tmmPvS8_+0x312)[0x560878c54892]
+[36mdb_1     |[0m mysqld(+0x118cfd8)[0x560878c0cfd8]
+[36mdb_1     |[0m mysqld(_Z13buf_read_pageRK9page_id_tRK11page_size_t+0x31)[0x560878c0d601]
+[36mdb_1     |[0m mysqld(_Z16buf_page_get_genRK9page_id_tRK11page_size_tmP11buf_block_tmPKcmP5mtr_tb+0x409)[0x560878be1589]
+[33mghost_1  |[0m [37mRollbackError: connect ECONNREFUSED 172.29.0.3:3306
+[33mghost_1  |[0m     at RollbackError.KnexMigrateError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:7:26)
+[33mghost_1  |[0m     at new RollbackError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:32:26)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/index.js:212:23
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Promise._settlePromiseFromHandler (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:547:31)
+[33mghost_1  |[0m     at Promise._settlePromise (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:604:18)
+[33mghost_1  |[0m     at Promise._settlePromise0 (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:649:10)
+[33mghost_1  |[0m     at Promise._settlePromises (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:725:18)
+[33mghost_1  |[0m     at _drainQueueStep (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:93:12)
+[33mghost_1  |[0m     at _drainQueue (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:86:9)
+[33mghost_1  |[0m     at Async._drainQueues (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:102:5)
+[33mghost_1  |[0m     at Immediate.Async.drainQueues [as _onImmediate] (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:15:14)
+[33mghost_1  |[0m     at runCallback (timers.js:705:18)
+[33mghost_1  |[0m     at tryOnImmediate (timers.js:676:5)
+[33mghost_1  |[0m     at processImmediate (timers.js:658:5)
+[33mghost_1  |[0m 
+[33mghost_1  |[0m Error: connect ECONNREFUSED 172.29.0.3:3306
+[33mghost_1  |[0m     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+[33mghost_1  |[0m     --------------------
+[33mghost_1  |[0m     at Protocol._enqueue (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+[33mghost_1  |[0m     at Protocol.handshake (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+[33mghost_1  |[0m     at Connection.connect (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/Connection.js:130:18)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:109:18
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/debuggability.js:384:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:518:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:103:10)
+[33mghost_1  |[0m     at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:104:12)
+[33mghost_1  |[0m     at create (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:283:23)
+[33mghost_1  |[0m     at utils_1.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:34)
+[33mghost_1  |[0m     at Object.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/utils.js:53:24)
+[33mghost_1  |[0m     at Promise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:17)
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/debuggability.js:303:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:483:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:79:10)
+[36mdb_1     |[0m mysqld(_Z31trx_rseg_get_n_undo_tablespacesPm+0x13e)[0x560878b7de6e]
+[36mdb_1     |[0m mysqld(+0x10cebd7)[0x560878b4ebd7]
+[36mdb_1     |[0m mysqld(_Z34innobase_start_or_create_for_mysqlv+0x2f7f)[0x560878b527af]
+[36mdb_1     |[0m mysqld(+0xfa4d20)[0x560878a24d20]
+[36mdb_1     |[0m mysqld(_Z24ha_initialize_handlertonP13st_plugin_int+0x55)[0x5608781cec35]
+[36mdb_1     |[0m mysqld(+0xbf7126)[0x560878677126]
+[36mdb_1     |[0m mysqld(_Z40plugin_register_builtin_and_init_core_sePiPPc+0x1dc)[0x560878678ffc]
+[36mdb_1     |[0m mysqld(+0x6f773e)[0x56087817773e]
+[36mdb_1     |[0m mysqld(_Z11mysqld_mainiPPc+0x758)[0x560878178ba8]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xeb)[0x7f70004cf09b]
+[36mdb_1     |[0m mysqld(_start+0x2a)[0x56087816dbea]
+[36mdb_1     |[0m The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+[36mdb_1     |[0m information that should help you find out what is causing the crash.
+[36mdb_1     |[0m 2021-11-05 23:24:57+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05 23:24:58+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[36mdb_1     |[0m 2021-11-05 23:24:58+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05T23:24:58.512905Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+[36mdb_1     |[0m 2021-11-05T23:24:58.515629Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+[36mdb_1     |[0m 2021-11-05T23:24:58.521074Z 0 [Note] InnoDB: PUNCH HOLE support available
+[36mdb_1     |[0m 2021-11-05T23:24:58.521102Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+[36mdb_1     |[0m 2021-11-05T23:24:58.521108Z 0 [Note] InnoDB: Uses event mutexes
+[36mdb_1     |[0m 2021-11-05T23:24:58.521113Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+[36mdb_1     |[0m 2021-11-05T23:24:58.521118Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[36mdb_1     |[0m 2021-11-05T23:24:58.521141Z 0 [Note] InnoDB: Using Linux native AIO
+[36mdb_1     |[0m 2021-11-05T23:24:58.521573Z 0 [Note] InnoDB: Number of pools: 1
+[36mdb_1     |[0m 2021-11-05T23:24:58.521744Z 0 [Note] InnoDB: Using CPU crc32 instructions
+[36mdb_1     |[0m 2021-11-05T23:24:58.524238Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+[36mdb_1     |[0m 2021-11-05T23:24:58.544012Z 0 [Note] InnoDB: Completed initialization of buffer pool
+[36mdb_1     |[0m 2021-11-05T23:24:58.547479Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+[36mdb_1     |[0m 2021-11-05T23:24:58.559753Z 0 [ERROR] [FATAL] InnoDB: Table flags are 0 in the data dictionary but the flags in file ./ibdata1 are 0x4000!
+[36mdb_1     |[0m 2021-11-05 23:24:58 0x7fbc9718d740  InnoDB: Assertion failure in thread 140447965566784 in file ut0ut.cc line 921
+[36mdb_1     |[0m InnoDB: We intentionally generate a memory trap.
+[36mdb_1     |[0m InnoDB: Submit a detailed bug report to http://bugs.mysql.com.
+[36mdb_1     |[0m InnoDB: If you get repeated assertion failures or crashes, even
+[36mdb_1     |[0m InnoDB: immediately after the mysqld startup, there may be
+[36mdb_1     |[0m InnoDB: corruption in the InnoDB tablespace. Please refer to
+[33mghost_1  |[0m     at callbackOrPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:306:12)
+[33mghost_1  |[0m     at Pool._create (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:236:9)
+[33mghost_1  |[0m     at Pool._doCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:208:36)
+[33mghost_1  |[0m     at Pool._tryAcquireOrCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:159:18)
+[33mghost_1  |[0m     at Pool.acquire (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:85:14)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:336:26
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Function.Promise.attempt.Promise.try (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/method.js:39:29)
+[33mghost_1  |[0m     at Client_MySQL.acquireConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:335:34)
+[33mghost_1  |[0m     at Runner.ensureConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:233:24)
+[33mghost_1  |[0m     at Runner.run (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:47:42)
+[33mghost_1  |[0m     at Builder.Target.then (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/interface.js:39:43)
+[33mghost_1  |[0m     at Builder.tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)[39m
+[33mghost_1  |[0m [39m
+[33mghost_1  |[0m [90m[39m
+[33mghost_1  |[0m (node:25) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+[33mghost_1  |[0m [2021-11-05 23:25:11] [31mERROR[39m
+[33mghost_1  |[0m [31m
+[33mghost_1  |[0m [31mNAME: RollbackError[39m
+[33mghost_1  |[0m [31mCODE: EAI_AGAIN[39m
+[33mghost_1  |[0m [31mMESSAGE: getaddrinfo EAI_AGAIN db db:3306[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mlevel:[39m[37mnormal[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mOuterError: The server has encountered an error.[39m
+[33mghost_1  |[0m [37mRollbackError: getaddrinfo EAI_AGAIN db db:3306
+[33mghost_1  |[0m     at RollbackError.KnexMigrateError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:7:26)
+[33mghost_1  |[0m     at new RollbackError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:32:26)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/index.js:212:23
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Promise._settlePromiseFromHandler (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:547:31)
+[33mghost_1  |[0m     at Promise._settlePromise (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:604:18)
+[33mghost_1  |[0m     at Promise._settlePromise0 (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:649:10)
+[33mghost_1  |[0m     at Promise._settlePromises (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:725:18)
+[33mghost_1  |[0m     at _drainQueueStep (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:93:12)
+[33mghost_1  |[0m     at _drainQueue (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:86:9)
+[33mghost_1  |[0m     at Async._drainQueues (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:102:5)
+[33mghost_1  |[0m     at Immediate.Async.drainQueues [as _onImmediate] (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:15:14)
+[33mghost_1  |[0m     at runCallback (timers.js:705:18)
+[33mghost_1  |[0m     at tryOnImmediate (timers.js:676:5)
+[33mghost_1  |[0m     at processImmediate (timers.js:658:5)
+[36mdb_1     |[0m InnoDB: http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html
+[36mdb_1     |[0m InnoDB: about forcing recovery.
+[36mdb_1     |[0m 23:24:58 UTC - mysqld got signal 6 ;
+[36mdb_1     |[0m This could be because you hit a bug. It is also possible that this binary
+[36mdb_1     |[0m or one of the libraries it was linked against is corrupt, improperly built,
+[36mdb_1     |[0m or misconfigured. This error can also be caused by malfunctioning hardware.
+[36mdb_1     |[0m Attempting to collect some information that could help diagnose the problem.
+[36mdb_1     |[0m As this is a crash and something is definitely wrong, the information
+[36mdb_1     |[0m collection process might fail.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m key_buffer_size=8388608
+[36mdb_1     |[0m read_buffer_size=131072
+[36mdb_1     |[0m max_used_connections=0
+[36mdb_1     |[0m max_threads=151
+[36mdb_1     |[0m thread_count=0
+[36mdb_1     |[0m connection_count=0
+[36mdb_1     |[0m It is possible that mysqld could use up to 
+[36mdb_1     |[0m key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 68197 K  bytes of memory
+[36mdb_1     |[0m Hope that's ok; if not, decrease some variables in the equation.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m Thread pointer: 0x0
+[36mdb_1     |[0m Attempting backtrace. You can use the following information to find out
+[36mdb_1     |[0m where mysqld died. If you see no messages after this, something went
+[36mdb_1     |[0m terribly wrong...
+[36mdb_1     |[0m stack_bottom = 0 thread_stack 0x40000
+[36mdb_1     |[0m mysqld(my_print_stacktrace+0x2c)[0x5587d0e3f98c]
+[36mdb_1     |[0m mysqld(handle_fatal_signal+0x501)[0x5587d073ff71]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libpthread.so.0(+0x12730)[0x7fbc976ee730]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x10b)[0x7fbc971c97bb]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(abort+0x121)[0x7fbc971b4535]
+[36mdb_1     |[0m mysqld(+0x6c3e0f)[0x5587d0706e0f]
+[36mdb_1     |[0m mysqld(+0x6c41ed)[0x5587d07071ed]
+[36mdb_1     |[0m mysqld(+0x11cc6d6)[0x5587d120f6d6]
+[36mdb_1     |[0m mysqld(+0x11ccd8e)[0x5587d120fd8e]
+[36mdb_1     |[0m mysqld(_Z6fil_ioRK9IORequestbRK9page_id_tRK11page_size_tmmPvS8_+0x312)[0x5587d1217892]
+[36mdb_1     |[0m mysqld(+0x118cfd8)[0x5587d11cffd8]
+[36mdb_1     |[0m mysqld(_Z13buf_read_pageRK9page_id_tRK11page_size_t+0x31)[0x5587d11d0601]
+[36mdb_1     |[0m mysqld(_Z16buf_page_get_genRK9page_id_tRK11page_size_tmP11buf_block_tmPKcmP5mtr_tb+0x409)[0x5587d11a4589]
+[36mdb_1     |[0m mysqld(_Z31trx_rseg_get_n_undo_tablespacesPm+0x13e)[0x5587d1140e6e]
+[36mdb_1     |[0m mysqld(+0x10cebd7)[0x5587d1111bd7]
+[36mdb_1     |[0m mysqld(_Z34innobase_start_or_create_for_mysqlv+0x2f7f)[0x5587d11157af]
+[36mdb_1     |[0m mysqld(+0xfa4d20)[0x5587d0fe7d20]
+[36mdb_1     |[0m mysqld(_Z24ha_initialize_handlertonP13st_plugin_int+0x55)[0x5587d0791c35]
+[36mdb_1     |[0m mysqld(+0xbf7126)[0x5587d0c3a126]
+[36mdb_1     |[0m mysqld(_Z40plugin_register_builtin_and_init_core_sePiPPc+0x1dc)[0x5587d0c3bffc]
+[36mdb_1     |[0m mysqld(+0x6f773e)[0x5587d073a73e]
+[36mdb_1     |[0m mysqld(_Z11mysqld_mainiPPc+0x758)[0x5587d073bba8]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xeb)[0x7fbc971b609b]
+[36mdb_1     |[0m mysqld(_start+0x2a)[0x5587d0730bea]
+[36mdb_1     |[0m The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+[36mdb_1     |[0m information that should help you find out what is causing the crash.
+[36mdb_1     |[0m 2021-11-05 23:25:50+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05 23:25:50+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[33mghost_1  |[0m 
+[33mghost_1  |[0m Error: getaddrinfo EAI_AGAIN db db:3306
+[33mghost_1  |[0m     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+[33mghost_1  |[0m     --------------------
+[36mdb_1     |[0m 2021-11-05 23:25:50+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.36-1debian10 started.
+[36mdb_1     |[0m 2021-11-05T23:25:51.246850Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+[36mdb_1     |[0m 2021-11-05T23:25:51.250796Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+[36mdb_1     |[0m 2021-11-05T23:25:51.258620Z 0 [Note] InnoDB: PUNCH HOLE support available
+[36mdb_1     |[0m 2021-11-05T23:25:51.258652Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+[36mdb_1     |[0m 2021-11-05T23:25:51.258661Z 0 [Note] InnoDB: Uses event mutexes
+[36mdb_1     |[0m 2021-11-05T23:25:51.258668Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+[36mdb_1     |[0m 2021-11-05T23:25:51.258675Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[36mdb_1     |[0m 2021-11-05T23:25:51.258681Z 0 [Note] InnoDB: Using Linux native AIO
+[36mdb_1     |[0m 2021-11-05T23:25:51.259226Z 0 [Note] InnoDB: Number of pools: 1
+[36mdb_1     |[0m 2021-11-05T23:25:51.259435Z 0 [Note] InnoDB: Using CPU crc32 instructions
+[36mdb_1     |[0m 2021-11-05T23:25:51.262611Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+[36mdb_1     |[0m 2021-11-05T23:25:51.287374Z 0 [Note] InnoDB: Completed initialization of buffer pool
+[36mdb_1     |[0m 2021-11-05T23:25:51.291013Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+[36mdb_1     |[0m 2021-11-05T23:25:51.303849Z 0 [ERROR] [FATAL] InnoDB: Table flags are 0 in the data dictionary but the flags in file ./ibdata1 are 0x4000!
+[36mdb_1     |[0m 2021-11-05 23:25:51 0x7f7409fea740  InnoDB: Assertion failure in thread 140136360617792 in file ut0ut.cc line 921
+[36mdb_1     |[0m InnoDB: We intentionally generate a memory trap.
+[36mdb_1     |[0m InnoDB: Submit a detailed bug report to http://bugs.mysql.com.
+[36mdb_1     |[0m InnoDB: If you get repeated assertion failures or crashes, even
+[36mdb_1     |[0m InnoDB: immediately after the mysqld startup, there may be
+[36mdb_1     |[0m InnoDB: corruption in the InnoDB tablespace. Please refer to
+[33mghost_1  |[0m     at Protocol._enqueue (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+[33mghost_1  |[0m     at Protocol.handshake (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+[33mghost_1  |[0m     at Connection.connect (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/Connection.js:130:18)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:109:18
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/debuggability.js:384:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:518:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:103:10)
+[33mghost_1  |[0m     at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:104:12)
+[33mghost_1  |[0m     at create (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:283:23)
+[33mghost_1  |[0m     at utils_1.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:34)
+[33mghost_1  |[0m     at Object.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/utils.js:53:24)
+[33mghost_1  |[0m     at Promise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:17)
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/debuggability.js:303:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:483:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:79:10)
+[33mghost_1  |[0m     at callbackOrPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:306:12)
+[33mghost_1  |[0m     at Pool._create (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:236:9)
+[33mghost_1  |[0m     at Pool._doCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:208:36)
+[33mghost_1  |[0m     at Pool._tryAcquireOrCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:159:18)
+[33mghost_1  |[0m     at Pool.acquire (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:85:14)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:336:26
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Function.Promise.attempt.Promise.try (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/method.js:39:29)
+[33mghost_1  |[0m     at Client_MySQL.acquireConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:335:34)
+[33mghost_1  |[0m     at Runner.ensureConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:233:24)
+[36mdb_1     |[0m InnoDB: http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html
+[36mdb_1     |[0m InnoDB: about forcing recovery.
+[36mdb_1     |[0m 23:25:51 UTC - mysqld got signal 6 ;
+[36mdb_1     |[0m This could be because you hit a bug. It is also possible that this binary
+[36mdb_1     |[0m or one of the libraries it was linked against is corrupt, improperly built,
+[36mdb_1     |[0m or misconfigured. This error can also be caused by malfunctioning hardware.
+[36mdb_1     |[0m Attempting to collect some information that could help diagnose the problem.
+[36mdb_1     |[0m As this is a crash and something is definitely wrong, the information
+[36mdb_1     |[0m collection process might fail.
+[36mdb_1     |[0m 
+[36mdb_1     |[0m key_buffer_size=8388608
+[36mdb_1     |[0m read_buffer_size=131072
+[36mdb_1     |[0m max_used_connections=0
+[36mdb_1     |[0m max_threads=151
+[36mdb_1     |[0m thread_count=0
+[36mdb_1     |[0m connection_count=0
+[36mdb_1     |[0m It is possible that mysqld could use up to 
+[36mdb_1     |[0m key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 68197 K  bytes of memory
+[36mdb_1     |[0m Hope that's ok; if not, decrease some variables in the equation.
+[33mghost_1  |[0m     at Runner.run (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:47:42)
+[33mghost_1  |[0m     at Builder.Target.then (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/interface.js:39:43)
+[33mghost_1  |[0m     at Builder.tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)[39m
+[33mghost_1  |[0m [39m
+[33mghost_1  |[0m [90m[39m
+[33mghost_1  |[0m (node:26) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+[33mghost_1  |[0m [2021-11-05 23:25:23] [31mERROR[39m
+[33mghost_1  |[0m [31m
+[33mghost_1  |[0m [31mNAME: RollbackError[39m
+[33mghost_1  |[0m [31mCODE: EAI_AGAIN[39m
+[33mghost_1  |[0m [31mMESSAGE: getaddrinfo EAI_AGAIN db db:3306[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mlevel:[39m[37mnormal[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mOuterError: The server has encountered an error.[39m
+[33mghost_1  |[0m [37mRollbackError: getaddrinfo EAI_AGAIN db db:3306
+[33mghost_1  |[0m     at RollbackError.KnexMigrateError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:7:26)
+[33mghost_1  |[0m     at new RollbackError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:32:26)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/index.js:212:23
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Promise._settlePromiseFromHandler (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:547:31)
+[33mghost_1  |[0m     at Promise._settlePromise (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:604:18)
+[33mghost_1  |[0m     at Promise._settlePromise0 (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:649:10)
+[33mghost_1  |[0m     at Promise._settlePromises (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:725:18)
+[33mghost_1  |[0m     at _drainQueueStep (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:93:12)
+[33mghost_1  |[0m     at _drainQueue (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:86:9)
+[33mghost_1  |[0m     at Async._drainQueues (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:102:5)
+[33mghost_1  |[0m     at Immediate.Async.drainQueues [as _onImmediate] (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:15:14)
+[33mghost_1  |[0m     at runCallback (timers.js:705:18)
+[33mghost_1  |[0m     at tryOnImmediate (timers.js:676:5)
+[33mghost_1  |[0m     at processImmediate (timers.js:658:5)
+[33mghost_1  |[0m 
+[33mghost_1  |[0m Error: getaddrinfo EAI_AGAIN db db:3306
+[36mdb_1     |[0m 
+[36mdb_1     |[0m Thread pointer: 0x0
+[36mdb_1     |[0m Attempting backtrace. You can use the following information to find out
+[36mdb_1     |[0m where mysqld died. If you see no messages after this, something went
+[36mdb_1     |[0m terribly wrong...
+[36mdb_1     |[0m stack_bottom = 0 thread_stack 0x40000
+[36mdb_1     |[0m mysqld(my_print_stacktrace+0x2c)[0x55d5121f698c]
+[36mdb_1     |[0m mysqld(handle_fatal_signal+0x501)[0x55d511af6f71]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libpthread.so.0(+0x12730)[0x7f740a54b730]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x10b)[0x7f740a0267bb]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(abort+0x121)[0x7f740a011535]
+[36mdb_1     |[0m mysqld(+0x6c3e0f)[0x55d511abde0f]
+[36mdb_1     |[0m mysqld(+0x6c41ed)[0x55d511abe1ed]
+[36mdb_1     |[0m mysqld(+0x11cc6d6)[0x55d5125c66d6]
+[36mdb_1     |[0m mysqld(+0x11ccd8e)[0x55d5125c6d8e]
+[36mdb_1     |[0m mysqld(_Z6fil_ioRK9IORequestbRK9page_id_tRK11page_size_tmmPvS8_+0x312)[0x55d5125ce892]
+[36mdb_1     |[0m mysqld(+0x118cfd8)[0x55d512586fd8]
+[36mdb_1     |[0m mysqld(_Z13buf_read_pageRK9page_id_tRK11page_size_t+0x31)[0x55d512587601]
+[36mdb_1     |[0m mysqld(_Z16buf_page_get_genRK9page_id_tRK11page_size_tmP11buf_block_tmPKcmP5mtr_tb+0x409)[0x55d51255b589]
+[36mdb_1     |[0m mysqld(_Z31trx_rseg_get_n_undo_tablespacesPm+0x13e)[0x55d5124f7e6e]
+[36mdb_1     |[0m mysqld(+0x10cebd7)[0x55d5124c8bd7]
+[33mghost_1  |[0m     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+[33mghost_1  |[0m     --------------------
+[33mghost_1  |[0m     at Protocol._enqueue (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+[33mghost_1  |[0m     at Protocol.handshake (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+[33mghost_1  |[0m     at Connection.connect (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/Connection.js:130:18)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:109:18
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/debuggability.js:384:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:518:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:103:10)
+[33mghost_1  |[0m     at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:104:12)
+[33mghost_1  |[0m     at create (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:283:23)
+[33mghost_1  |[0m     at utils_1.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:34)
+[33mghost_1  |[0m     at Object.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/utils.js:53:24)
+[33mghost_1  |[0m     at Promise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:17)
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/debuggability.js:303:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:483:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:79:10)
+[33mghost_1  |[0m     at callbackOrPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:306:12)
+[33mghost_1  |[0m     at Pool._create (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:236:9)
+[33mghost_1  |[0m     at Pool._doCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:208:36)
+[33mghost_1  |[0m     at Pool._tryAcquireOrCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:159:18)
+[33mghost_1  |[0m     at Pool.acquire (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:85:14)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:336:26
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Function.Promise.attempt.Promise.try (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/method.js:39:29)
+[33mghost_1  |[0m     at Client_MySQL.acquireConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:335:34)
+[33mghost_1  |[0m     at Runner.ensureConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:233:24)
+[33mghost_1  |[0m     at Runner.run (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:47:42)
+[33mghost_1  |[0m     at Builder.Target.then (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/interface.js:39:43)
+[33mghost_1  |[0m     at Builder.tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)[39m
+[33mghost_1  |[0m [39m
+[33mghost_1  |[0m [90m[39m
+[33mghost_1  |[0m (node:25) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+[33mghost_1  |[0m [2021-11-05 23:25:35] [31mERROR[39m
+[33mghost_1  |[0m [31m
+[33mghost_1  |[0m [31mNAME: RollbackError[39m
+[33mghost_1  |[0m [31mCODE: EAI_AGAIN[39m
+[33mghost_1  |[0m [31mMESSAGE: getaddrinfo EAI_AGAIN db db:3306[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mlevel:[39m[37mnormal[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mOuterError: The server has encountered an error.[39m
+[33mghost_1  |[0m [37mRollbackError: getaddrinfo EAI_AGAIN db db:3306
+[33mghost_1  |[0m     at RollbackError.KnexMigrateError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:7:26)
+[33mghost_1  |[0m     at new RollbackError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:32:26)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/index.js:212:23
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Promise._settlePromiseFromHandler (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:547:31)
+[33mghost_1  |[0m     at Promise._settlePromise (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:604:18)
+[33mghost_1  |[0m     at Promise._settlePromise0 (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:649:10)
+[33mghost_1  |[0m     at Promise._settlePromises (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:725:18)
+[33mghost_1  |[0m     at _drainQueueStep (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:93:12)
+[33mghost_1  |[0m     at _drainQueue (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:86:9)
+[33mghost_1  |[0m     at Async._drainQueues (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:102:5)
+[33mghost_1  |[0m     at Immediate.Async.drainQueues [as _onImmediate] (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:15:14)
+[33mghost_1  |[0m     at runCallback (timers.js:705:18)
+[33mghost_1  |[0m     at tryOnImmediate (timers.js:676:5)
+[33mghost_1  |[0m     at processImmediate (timers.js:658:5)
+[33mghost_1  |[0m 
+[33mghost_1  |[0m Error: getaddrinfo EAI_AGAIN db db:3306
+[33mghost_1  |[0m     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+[33mghost_1  |[0m     --------------------
+[33mghost_1  |[0m     at Protocol._enqueue (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+[33mghost_1  |[0m     at Protocol.handshake (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+[33mghost_1  |[0m     at Connection.connect (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/Connection.js:130:18)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:109:18
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/debuggability.js:384:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:518:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:103:10)
+[33mghost_1  |[0m     at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:104:12)
+[33mghost_1  |[0m     at create (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:283:23)
+[33mghost_1  |[0m     at utils_1.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:34)
+[33mghost_1  |[0m     at Object.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/utils.js:53:24)
+[33mghost_1  |[0m     at Promise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:17)
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/debuggability.js:303:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:483:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:79:10)
+[33mghost_1  |[0m     at callbackOrPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:306:12)
+[33mghost_1  |[0m     at Pool._create (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:236:9)
+[33mghost_1  |[0m     at Pool._doCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:208:36)
+[33mghost_1  |[0m     at Pool._tryAcquireOrCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:159:18)
+[33mghost_1  |[0m     at Pool.acquire (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:85:14)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:336:26
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Function.Promise.attempt.Promise.try (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/method.js:39:29)
+[33mghost_1  |[0m     at Client_MySQL.acquireConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:335:34)
+[33mghost_1  |[0m     at Runner.ensureConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:233:24)
+[33mghost_1  |[0m     at Runner.run (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:47:42)
+[33mghost_1  |[0m     at Builder.Target.then (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/interface.js:39:43)
+[33mghost_1  |[0m     at Builder.tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)[39m
+[33mghost_1  |[0m [39m
+[33mghost_1  |[0m [90m[39m
+[33mghost_1  |[0m (node:25) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+[33mghost_1  |[0m [2021-11-05 23:25:48] [31mERROR[39m
+[33mghost_1  |[0m [31m
+[33mghost_1  |[0m [31mNAME: RollbackError[39m
+[33mghost_1  |[0m [31mCODE: EAI_AGAIN[39m
+[33mghost_1  |[0m [31mMESSAGE: getaddrinfo EAI_AGAIN db db:3306[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mlevel:[39m[37mnormal[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mOuterError: The server has encountered an error.[39m
+[36mdb_1     |[0m mysqld(_Z34innobase_start_or_create_for_mysqlv+0x2f7f)[0x55d5124cc7af]
+[36mdb_1     |[0m mysqld(+0xfa4d20)[0x55d51239ed20]
+[36mdb_1     |[0m mysqld(_Z24ha_initialize_handlertonP13st_plugin_int+0x55)[0x55d511b48c35]
+[36mdb_1     |[0m mysqld(+0xbf7126)[0x55d511ff1126]
+[36mdb_1     |[0m mysqld(_Z40plugin_register_builtin_and_init_core_sePiPPc+0x1dc)[0x55d511ff2ffc]
+[36mdb_1     |[0m mysqld(+0x6f773e)[0x55d511af173e]
+[36mdb_1     |[0m mysqld(_Z11mysqld_mainiPPc+0x758)[0x55d511af2ba8]
+[36mdb_1     |[0m /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xeb)[0x7f740a01309b]
+[36mdb_1     |[0m mysqld(_start+0x2a)[0x55d511ae7bea]
+[36mdb_1     |[0m The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+[36mdb_1     |[0m information that should help you find out what is causing the crash.
+[33mghost_1  |[0m [37mRollbackError: getaddrinfo EAI_AGAIN db db:3306
+[33mghost_1  |[0m     at RollbackError.KnexMigrateError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:7:26)
+[33mghost_1  |[0m     at new RollbackError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:32:26)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/index.js:212:23
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Promise._settlePromiseFromHandler (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:547:31)
+[33mghost_1  |[0m     at Promise._settlePromise (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:604:18)
+[33mghost_1  |[0m     at Promise._settlePromise0 (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:649:10)
+[33mghost_1  |[0m     at Promise._settlePromises (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:725:18)
+[33mghost_1  |[0m     at _drainQueueStep (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:93:12)
+[33mghost_1  |[0m     at _drainQueue (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:86:9)
+[33mghost_1  |[0m     at Async._drainQueues (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:102:5)
+[33mghost_1  |[0m     at Immediate.Async.drainQueues [as _onImmediate] (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:15:14)
+[33mghost_1  |[0m     at runCallback (timers.js:705:18)
+[33mghost_1  |[0m     at tryOnImmediate (timers.js:676:5)
+[33mghost_1  |[0m     at processImmediate (timers.js:658:5)
+[33mghost_1  |[0m 
+[33mghost_1  |[0m Error: getaddrinfo EAI_AGAIN db db:3306
+[33mghost_1  |[0m     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+[33mghost_1  |[0m     --------------------
+[33mghost_1  |[0m     at Protocol._enqueue (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+[33mghost_1  |[0m     at Protocol.handshake (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+[33mghost_1  |[0m     at Connection.connect (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/Connection.js:130:18)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:109:18
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/debuggability.js:384:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:518:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:103:10)
+[33mghost_1  |[0m     at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:104:12)
+[33mghost_1  |[0m     at create (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:283:23)
+[33mghost_1  |[0m     at utils_1.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:34)
+[33mghost_1  |[0m     at Object.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/utils.js:53:24)
+[33mghost_1  |[0m     at Promise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:17)
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/debuggability.js:303:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:483:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:79:10)
+[33mghost_1  |[0m     at callbackOrPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:306:12)
+[33mghost_1  |[0m     at Pool._create (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:236:9)
+[33mghost_1  |[0m     at Pool._doCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:208:36)
+[33mghost_1  |[0m     at Pool._tryAcquireOrCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:159:18)
+[33mghost_1  |[0m     at Pool.acquire (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:85:14)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:336:26
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Function.Promise.attempt.Promise.try (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/method.js:39:29)
+[33mghost_1  |[0m     at Client_MySQL.acquireConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:335:34)
+[33mghost_1  |[0m     at Runner.ensureConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:233:24)
+[33mghost_1  |[0m     at Runner.run (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:47:42)
+[33mghost_1  |[0m     at Builder.Target.then (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/interface.js:39:43)
+[33mghost_1  |[0m     at Builder.tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)[39m
+[33mghost_1  |[0m [39m
+[33mghost_1  |[0m [90m[39m
+[33mghost_1  |[0m (node:24) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.
+[33mghost_1  |[0m [2021-11-05 23:25:58] [31mERROR[39m
+[33mghost_1  |[0m [31m
+[33mghost_1  |[0m [31mNAME: RollbackError[39m
+[33mghost_1  |[0m [31mCODE: EAI_AGAIN[39m
+[33mghost_1  |[0m [31mMESSAGE: getaddrinfo EAI_AGAIN db db:3306[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mlevel:[39m[37mnormal[39m
+[33mghost_1  |[0m 
+[33mghost_1  |[0m [37mOuterError: The server has encountered an error.[39m
+[33mghost_1  |[0m [37mRollbackError: getaddrinfo EAI_AGAIN db db:3306
+[33mghost_1  |[0m     at RollbackError.KnexMigrateError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:7:26)
+[33mghost_1  |[0m     at new RollbackError (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/errors.js:32:26)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/lib/index.js:212:23
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Promise._settlePromiseFromHandler (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:547:31)
+[33mghost_1  |[0m     at Promise._settlePromise (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:604:18)
+[33mghost_1  |[0m     at Promise._settlePromise0 (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:649:10)
+[33mghost_1  |[0m     at Promise._settlePromises (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/promise.js:725:18)
+[33mghost_1  |[0m     at _drainQueueStep (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:93:12)
+[33mghost_1  |[0m     at _drainQueue (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:86:9)
+[33mghost_1  |[0m     at Async._drainQueues (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:102:5)
+[33mghost_1  |[0m     at Immediate.Async.drainQueues [as _onImmediate] (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/async.js:15:14)
+[33mghost_1  |[0m     at runCallback (timers.js:705:18)
+[33mghost_1  |[0m     at tryOnImmediate (timers.js:676:5)
+[33mghost_1  |[0m     at processImmediate (timers.js:658:5)
+[33mghost_1  |[0m 
+[33mghost_1  |[0m Error: getaddrinfo EAI_AGAIN db db:3306
+[33mghost_1  |[0m     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+[33mghost_1  |[0m     --------------------
+[33mghost_1  |[0m     at Protocol._enqueue (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+[33mghost_1  |[0m     at Protocol.handshake (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+[33mghost_1  |[0m     at Connection.connect (/var/lib/ghost/versions/1.26.2/node_modules/mysql/lib/Connection.js:130:18)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:109:18
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/debuggability.js:384:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:518:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/promise.js:103:10)
+[33mghost_1  |[0m     at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/dialects/mysql/index.js:104:12)
+[33mghost_1  |[0m     at create (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:283:23)
+[33mghost_1  |[0m     at utils_1.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:34)
+[33mghost_1  |[0m     at Object.tryPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/utils.js:53:24)
+[33mghost_1  |[0m     at Promise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:315:17)
+[33mghost_1  |[0m     at Promise._execute (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/debuggability.js:303:9)
+[33mghost_1  |[0m     at Promise._resolveFromExecutor (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:483:18)
+[33mghost_1  |[0m     at new Promise (/var/lib/ghost/versions/1.26.2/node_modules/bluebird/js/release/promise.js:79:10)
+[33mghost_1  |[0m     at callbackOrPromise (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:306:12)
+[33mghost_1  |[0m     at Pool._create (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:236:9)
+[33mghost_1  |[0m     at Pool._doCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:208:36)
+[33mghost_1  |[0m     at Pool._tryAcquireOrCreate (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:159:18)
+[33mghost_1  |[0m     at Pool.acquire (/var/lib/ghost/versions/1.26.2/node_modules/tarn/lib/Pool.js:85:14)
+[33mghost_1  |[0m     at /var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:336:26
+[33mghost_1  |[0m     at tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/util.js:16:23)
+[33mghost_1  |[0m     at Function.Promise.attempt.Promise.try (/var/lib/ghost/versions/1.26.2/node_modules/knex/node_modules/bluebird/js/release/method.js:39:29)
+[33mghost_1  |[0m     at Client_MySQL.acquireConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/client.js:335:34)
+[33mghost_1  |[0m     at Runner.ensureConnection (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:233:24)
+[33mghost_1  |[0m     at Runner.run (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/runner.js:47:42)
+[33mghost_1  |[0m     at Builder.Target.then (/var/lib/ghost/versions/1.26.2/node_modules/knex/lib/interface.js:39:43)
+[33mghost_1  |[0m     at Builder.tryCatcher (/var/lib/ghost/versions/1.26.2/node_modules/knex-migrator/node_modules/bluebird/js/release/util.js:16:23)[39m
+[33mghost_1  |[0m [39m
+[33mghost_1  |[0m [90m[39m
