@@ -1,0 +1,3 @@
+add to package.json script "tests": "mocha tests" so npm test cmd works. Mocha understands describe and it
+npm install --save-dev sinon mocha chai, to install mocha and chai and sinon
+npm install --save-dev sinon fornece funcoes para tipos dde double tests, fs
